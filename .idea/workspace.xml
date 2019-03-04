@@ -7,7 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a46beb27-1009-4877-b621-15d6b781a447" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/org/projet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/LoginServlet.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/org/projet/GestGroupe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/GestGroupe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ProjetJEE_war_exploded/WEB-INF/classes/MyServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ProjetJEE_war_exploded/WEB-INF/classes/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ProjetJEE_war_exploded/WEB-INF/classes/org/projet/GestEtu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ProjetJEE_war_exploded/WEB-INF/classes/org/projet/GestEtu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ProjetJEE_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ProjetJEE_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetJEE/MyServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetJEE/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetJEE/org/projet/GestEtu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetJEE/org/projet/GestEtu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/projet/GestEtu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/GestEtu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/GestEtu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/GestEtu.jsp" afterDir="false" />
+>>>>>>> master
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
@@ -79,8 +96,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/projet/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-75">
               <caret line="19" column="63" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="63" />
+=======
+            <state relative-caret-position="135">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+>>>>>>> master
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,8 +113,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="149">
               <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+=======
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -100,8 +127,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/projet/GestEtu.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="210">
               <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+=======
+            <state relative-caret-position="60">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -115,11 +147,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
               <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -198,6 +238,7 @@
         <option value="$PROJECT_DIR$/web/javascripts/GestEtu.js" />
         <option value="$PROJECT_DIR$/src/org/projet/Authentificator.java" />
         <option value="$PROJECT_DIR$/src/loginConfig.jaas" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/web/GestGroupe.jsp" />
         <option value="$PROJECT_DIR$/src/org/projet/GestEtu.java" />
         <option value="$PROJECT_DIR$/src/org/projet/GestGroupe.java" />
@@ -205,6 +246,15 @@
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/org/projet/LoginServlet.java" />
+=======
+        <option value="$PROJECT_DIR$/src/org/projet/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/web/GestGroupe.jsp" />
+        <option value="$PROJECT_DIR$/src/org/projet/GestEtu.java" />
+        <option value="$PROJECT_DIR$/src/org/projet/GestGroupe.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/GestEtu.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -250,6 +300,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="projet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetJEE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetJEE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetJEE" type="b2602c69:ProjectViewProjectNode" />
@@ -395,12 +452,20 @@
       <workItem from="1550614582494" duration="7000" />
       <workItem from="1551278214776" duration="603000" />
       <workItem from="1551372751257" duration="595000" />
+<<<<<<< HEAD
       <workItem from="1551713609715" duration="3870000" />
+=======
+      <workItem from="1551713609715" duration="1928000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="19797000" />
+=======
+    <option name="totallyTimeSpent" value="17855000" />
+>>>>>>> master
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,6 +767,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/accueil.jsp">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
@@ -757,6 +823,63 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/GestGroupe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/GestEtu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/tutorial/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/GestEtu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+>>>>>>> master
         </state>
       </provider>
     </entry>

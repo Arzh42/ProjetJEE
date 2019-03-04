@@ -8,7 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
+<<<<<<< HEAD
     <title>Gestionnaire</title>
+=======
+    <title>$Title$</title>
+>>>>>>> master
   </head>
   <body>
     <header>

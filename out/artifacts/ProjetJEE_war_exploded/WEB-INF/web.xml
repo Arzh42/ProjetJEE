@@ -16,6 +16,7 @@
 
     </resource-ref>
 
+<<<<<<< HEAD
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>user</web-resource-name>
@@ -30,6 +31,8 @@
     <security-role>
         <role-name>user</role-name>
     </security-role>
+=======
+>>>>>>> master
 
     <servlet>
         <servlet-name>etu_data</servlet-name>
