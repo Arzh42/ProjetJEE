@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "Servlet")
-public class GestEtu extends HttpServlet {
+public class GestGroupe extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doProcess(request,response);
     }
@@ -20,14 +20,8 @@ public class GestEtu extends HttpServlet {
     }
     private void doProcess(HttpServletRequest request, HttpServletResponse response) {
 
-        //Récupération des données de liste des étudiants
-        EtudiantService etuService = new EtudiantServiceImpl();
-        List<Etudiant> listEtudiants = etuService.getAllEtudiants();
-        request.setAttribute("listEtudiants",listEtudiants);
-
-
         //Récupération et envoie de la page
-        String pageName="/GestEtu.jsp";
+        String pageName="/GestGroupe.jsp";
         RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
         try {
             rd.forward(request, response);

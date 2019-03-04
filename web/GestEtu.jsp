@@ -18,14 +18,6 @@
     <nav>
       <a href="GestEtu">Gestion Etudiant</a>
       <a href="GestGroupe">Gestion Groupe</a>
-      <div style="display: inline-block;" class="logBox">
-        <form method="post" action="login">
-          <h3 style="display: inline-block;">Connection : </h3>
-          <input type="text" placeholder="login" id="login" name="login"/>
-          <input type="password" placeholder="password" name="password" id="password"/>
-          <button id="send">Connection</button>
-        </form>
-      </div>
     </nav>
   </header>
   <ul id="listeEtu">

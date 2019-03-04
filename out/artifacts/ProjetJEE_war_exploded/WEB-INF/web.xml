@@ -16,16 +16,21 @@
 
     </resource-ref>
 
-    <servlet>
-        <display-name>Hello World</display-name>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <servlet-class>org.tutorial.HttpServlet</servlet-class>
-    </servlet>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>user</web-resource-name>
+            <url-pattern>/user/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
 
-    <servlet-mapping>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <url-pattern>/HelloWorldServlet</url-pattern>
-    </servlet-mapping>
+
+    <security-role>
+        <role-name>user</role-name>
+    </security-role>
+
     <servlet>
         <servlet-name>etu_data</servlet-name>
         <servlet-class>org.projet.Etu_data</servlet-class>
@@ -33,8 +38,11 @@
 
     <servlet-mapping>
         <servlet-name>etu_data</servlet-name>
-        <url-pattern>/etu_data</url-pattern>
+        <url-pattern>/user/etu_data</url-pattern>
     </servlet-mapping>
+
+
+
     <servlet>
         <servlet-name>GestEtu</servlet-name>
         <servlet-class>org.projet.GestEtu</servlet-class>
@@ -42,6 +50,18 @@
     
     <servlet-mapping>
         <servlet-name>GestEtu</servlet-name>
-        <url-pattern>/GestEtu</url-pattern>
+        <url-pattern>/user/GestEtu</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>GestGroupe</servlet-name>
+        <servlet-class>org.projet.GestGroupe</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GestGroupe</servlet-name>
+        <url-pattern>/user/GestGroupe</url-pattern>
     </servlet-mapping>
 </web-app>
