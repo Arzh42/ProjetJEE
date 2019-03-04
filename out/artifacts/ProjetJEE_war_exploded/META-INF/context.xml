@@ -1,0 +1,21 @@
+<Context>
+
+    <Resource name="jdbc/JEE"
+
+              auth="Container"
+
+              type="javax.sql.DataSource"
+
+              username="toto"
+
+              password="toto"
+
+              driverClassName="com.mysql.jdbc.Driver"
+
+              url="jdbc:mysql://localhost:3306/ProjetJEE"
+
+              maxActive="15"
+
+              maxIdle="3"/>
+
+</Context>
