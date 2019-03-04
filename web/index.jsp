@@ -8,25 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-
     <title>$Title$</title>
   </head>
   <body>
     <header>
       <h1>Gestionnaire</h1>
-
     </header>
-    <nav>
-      <a href="GestEtu">Gestion Etudiant</a>
-      <a href="GestGroup">Gestion des Groupes</a>
-    </nav>
-    <ul id="listeEtu">
-      <li>George</li>
-      <li>Lily</li>
-    </ul>
-    <section>
-
-    </section>
-    $END$
+    <div style="display: inline-block;" class="logBox">
+      <form method="post" action="login">
+        <h3 style="display: inline-block;">Connection : </h3>
+        <input type="text" placeholder="login" id="login" name="login"/>
+        <input type="password" placeholder="password" name="password" id="password"/>
+        <button id="send">Connection</button>
+      </form>
+    </div>
   </body>
 </html>
