@@ -22,5 +22,7 @@
         <button id="send">Connection</button>
       </form>
     </div>
+  <a href="user/GestEtu">Gestion des étudiants</a>
+  <a href="user/GestGroupe">Gestion des groupes</a>
   </body>
 </html>

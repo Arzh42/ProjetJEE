@@ -15,8 +15,7 @@
         <res-auth>Container</res-auth>
 
     </resource-ref>
-
-<<<<<<< HEAD
+    <!--
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>user</web-resource-name>
@@ -31,8 +30,16 @@
     <security-role>
         <role-name>user</role-name>
     </security-role>
-=======
->>>>>>> master
+    -->
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>org.projet.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>etu_data</servlet-name>

@@ -8,11 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-<<<<<<< HEAD
     <title>Gestionnaire</title>
-=======
-    <title>$Title$</title>
->>>>>>> master
   </head>
   <body>
     <header>
@@ -26,5 +22,7 @@
         <button id="send">Connection</button>
       </form>
     </div>
+  <a href="user/GestEtu">Gestion des étudiants</a>
+  <a href="user/GestGroupe">Gestion des groupes</a>
   </body>
 </html>
