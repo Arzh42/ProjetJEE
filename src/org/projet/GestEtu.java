@@ -27,7 +27,7 @@ public class GestEtu extends HttpServlet {
 
 
         //Récupération et envoie de la page
-        String pageName="/GestEtu.jsp";
+        String pageName="/WEB-INF/GestEtu.jsp";
         RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
         try {
             rd.forward(request, response);

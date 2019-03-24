@@ -1,3 +1,0 @@
-EtuLogin {
-    org.projet.LoginModule required;
-};

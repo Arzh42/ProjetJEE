@@ -21,7 +21,7 @@ public class GestGroupe extends HttpServlet {
     private void doProcess(HttpServletRequest request, HttpServletResponse response) {
 
         //Récupération et envoie de la page
-        String pageName="/GestGroupe.jsp";
+        String pageName="/WEB-INF/GestGroupe.jsp";
         RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
         try {
             rd.forward(request, response);

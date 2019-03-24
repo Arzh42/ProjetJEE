@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 public class Etu_data extends HttpServlet {
@@ -13,19 +14,33 @@ public class Etu_data extends HttpServlet {
         EtudiantService etuService = new EtudiantServiceImpl();
 
 
-        String attrId = request.getParameter("id");
-
-
-
-        Etudiant etu = etuService.getEtudiantsById(attrId.split("etu")[1]);
-        request.setAttribute("Etudiant",etu);
-
-        String pageName="/etu_data.jsp";
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
         try {
-            rd.forward(request, response);
-        } catch (ServletException | IOException e) {
-            e.printStackTrace();
+            String attrId = request.getParameter("id");
+            String id = attrId.split("etu")[1];
+            Etudiant etu = etuService.getEtudiantsById(id);
+            request.setAttribute("Etudiant",etu);
+
+            String pageName="/WEB-INF/etu_data.jsp";
+            RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
+            try {
+                rd.forward(request, response);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
         }
+        catch(IndexOutOfBoundsException e) {
+            response.setContentType("text/html");
+            response.setCharacterEncoding( "UTF-8" );
+            PrintWriter out = response.getWriter();
+            out.println("Ressource Id not attributed");
+        }
+        catch(Exception e) {
+            response.setContentType("text/html");
+            response.setCharacterEncoding( "UTF-8" );
+            PrintWriter out = response.getWriter();
+            out.println("Ressource not available");
+        }
+
+
     }
 }

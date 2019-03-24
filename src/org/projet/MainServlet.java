@@ -20,7 +20,7 @@ public class MainServlet extends HttpServlet {
     }
     private void doProcess(HttpServletRequest request, HttpServletResponse response) {
             //Récupération et envoie de la page
-            String pageName="/main.jsp";
+            String pageName="/WEB-INF/main.jsp";
             RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
             try {
                 rd.forward(request, response);

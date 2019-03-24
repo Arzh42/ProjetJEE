@@ -8,9 +8,9 @@
 <html>
 <head>
   <title>Liste Etudiant</title>
-  <link rel="stylesheet" href="stylesheets/GestEtu.css" type="text/css"/>
-  <script type="text/javascript" src="javascripts/jquery.js"> </script>
-  <script type="text/javascript" src="javascripts/GestEtu.js"></script>
+  <link rel="stylesheet" href="../stylesheets/GestEtu.css" type="text/css"/>
+  <script type="text/javascript" src="../javascripts/jquery.js"> </script>
+  <script type="text/javascript" src="../javascripts/GestEtu.js"></script>
 </head>
 <body>
   <header>

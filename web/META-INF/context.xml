@@ -17,5 +17,6 @@
               maxActive="15"
 
               maxIdle="3"/>
+    <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/JEE" localDataSource="true" userTable="users" userRoleTable="roles" userNameCol="name" userCredCol="password" roleNameCol="role"/>
 
 </Context>
