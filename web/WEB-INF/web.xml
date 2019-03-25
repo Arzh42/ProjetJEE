@@ -60,6 +60,23 @@
         <url-pattern>/user/etu_data</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GAdminServlet</servlet-name>
+        <servlet-class>org.projet.Servlet.GAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GAdminServlet</servlet-name>
+        <url-pattern>/user/GestionCompte</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangePassServlet</servlet-name>
+        <servlet-class>org.projet.Servlet.changePassServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangePassServlet</servlet-name>
+        <url-pattern>/user/changePassword</url-pattern>
+    </servlet-mapping>
 
 
     <servlet>

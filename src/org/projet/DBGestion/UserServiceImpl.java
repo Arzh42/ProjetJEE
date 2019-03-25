@@ -33,7 +33,6 @@ public class UserServiceImpl implements UserService {
             statement.setString(1,name);
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
-                rs.beforeFirst();
                 return rs.getString("role");
             }
             else {
@@ -43,5 +42,19 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void changePassword(String name, String password) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("UPDATE users SET password=? WHERE name=?");
+            statement.setString(1,password);
+            statement.setString(2,name);
+            int status = statement.executeUpdate();
+            System.out.println(status);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -46,5 +46,6 @@
     %>
   <a href="user/GestEtu">Gestion des étudiants</a>
   <a href="user/GestGroupe">Gestion des groupes</a>
+    <a href="user/GestionCompte">Gestion des comptes utilisateurs</a>
   </body>
 </html>
