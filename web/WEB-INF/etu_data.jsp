@@ -1,4 +1,4 @@
-<%@ page import="org.projet.Etudiant" %>
+<%@ page import="org.projet.DBGestion.Etudiant" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Etudiant etu = (Etudiant) request.getAttribute("Etudiant");

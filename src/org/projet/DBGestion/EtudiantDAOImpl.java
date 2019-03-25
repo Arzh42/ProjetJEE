@@ -1,6 +1,5 @@
-package org.projet;
+package org.projet.DBGestion;
 
-import org.tutorial.Book;
 import org.tutorial.DBManager;
 
 import java.sql.Connection;

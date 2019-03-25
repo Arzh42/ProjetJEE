@@ -1,5 +1,5 @@
 
-package org.projet;
+package org.projet.DBGestion;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

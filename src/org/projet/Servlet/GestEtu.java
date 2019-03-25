@@ -1,4 +1,8 @@
-package org.projet;
+package org.projet.Servlet;
+
+import org.projet.DBGestion.Etudiant;
+import org.projet.DBGestion.EtudiantService;
+import org.projet.DBGestion.EtudiantServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

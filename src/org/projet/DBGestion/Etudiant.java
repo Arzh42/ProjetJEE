@@ -1,4 +1,4 @@
-package org.projet;
+package org.projet.DBGestion;
 
 import java.util.Date;
 

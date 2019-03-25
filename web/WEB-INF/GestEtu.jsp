@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="org.projet.Etudiant" %>
+<%@ page import="org.projet.DBGestion.Etudiant" %>
 <%@ page import="java.util.List" %>
 <%
   List<Etudiant> listEtudiants = (List<Etudiant>)request.getAttribute("listEtudiants");

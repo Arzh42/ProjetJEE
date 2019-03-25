@@ -1,6 +1,6 @@
 <%@ page import="org.tutorial.Book" %>
 <%@ page import="java.util.List" %>
-<%@ page import="org.tutorial.BookDAO" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: hugo
   Date: 15/02/19
