@@ -6,4 +6,6 @@ public interface UserService {
     String getUserRole(String name) throws Exception;
 
     void changePassword(String name, String password2);
+
+    void changeQuestion(String name, String question, String reponse);
 }

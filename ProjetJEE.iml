@@ -22,5 +22,20 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.16" level="application_server_libraries" />
     <orderEntry type="library" name="jdbc" level="project" />
     <orderEntry type="library" name="jdbc (2)" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/commons-codec-1.12" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://$USER_HOME$/Downloads/commons-codec-1.12/apidocs" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/commons-codec-1.12" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Downloads/commons-codec-1.12" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/commons-codec-1.12" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>

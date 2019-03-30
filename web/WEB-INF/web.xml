@@ -78,6 +78,14 @@
         <url-pattern>/user/changePassword</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ChangeQuestionServlet</servlet-name>
+        <servlet-class>org.projet.Servlet.changeQuestionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeQuestionServlet</servlet-name>
+        <url-pattern>/user/changeQuestion</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>GestEtu</servlet-name>
