@@ -16,4 +16,10 @@ public class EtudiantServiceImpl implements EtudiantService{
         return etuDAO.findById(id);
     }
 
+    @Override
+    public void addEtudiant(Etudiant etu) {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        etuDAO.addEtudiant(etu);
+    }
+
 }
