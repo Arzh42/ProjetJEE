@@ -7,5 +7,5 @@ public interface EtudiantDAO {
 
     Etudiant findById(String id);
 
-
+    void addEtudiant(Etudiant etu);
 }

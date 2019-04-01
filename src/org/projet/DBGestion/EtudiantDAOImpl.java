@@ -13,6 +13,8 @@ import java.math.BigDecimal;
 import java.sql.*;
 import java.text.ParseException;
 import java.util.*;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class EtudiantDAOImpl implements EtudiantDAO {
@@ -123,6 +125,28 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         }
         else {
             return list.get(0);
+        }
+    }
+
+    @Override
+    public void addEtudiant(Etudiant etu) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("INSERT INTO etudiant(nom,prenom,date_de_naissance,courrielPerso,courrielPro,serieBac,dateBac,mentionBac,diplome,dateDiplome) VALUES (?,?,?,?,?,?,?,?,?,?)");
+            statement.setString(1,etu.getNom());
+            statement.setString(2,etu.getPrenom());
+            statement.setString(2,etu.getDate_de_naissance());
+            statement.setString(2,etu.getCourrielPerso());
+            statement.setString(2,etu.getCourrielPro());
+            statement.setString(2,etu.getSerieBac());
+            statement.setString(2,etu.getDateBac());
+            statement.setString(2,etu.getMentionBac());
+            statement.setString(2,etu.getDiplome());
+            statement.setString(2,etu.getDateDiplome());
+            int status = statement.executeUpdate();
+            System.out.println(status);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
