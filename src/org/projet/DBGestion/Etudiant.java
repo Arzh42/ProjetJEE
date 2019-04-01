@@ -3,39 +3,43 @@ package org.projet.DBGestion;
 import java.util.Date;
 
 public class Etudiant {
-    private int id;
+    private String id;
     private String nom;
     private String prenom;
     private Date date_de_naissance;
     private String courrielPro;
     private String courrielPerso;
     private String serieBac;
-    private Date dateBac;
+    private String dateBac;
     private String mentionBac;
     private String diplome;
-    private Date dateDiplome;
+    private String dateDiplome;
 
     /**
      *
      */
-    public Etudiant(int id,String nom,String prenom,Date date_de_naissance,String courrielPro,String courrielPerso,String serieBac,Date dateBac,String mentionBac,String diplome,Date dateDiplome) {
+    public Etudiant(String id,String nom,String prenom,Date date_de_naissance, String dateBac/*,String courrielPro,String courrielPerso,String serieBac,Date dateBac,String mentionBac,String diplome,Date dateDiplome*/) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.date_de_naissance = date_de_naissance;
-        this.courrielPro = courrielPro;
+        this.dateBac = dateBac;
+        /*this.courrielPro = courrielPro;
         this.courrielPerso = courrielPerso;
         this.serieBac = serieBac;
-        this.dateBac = dateBac;
+
         this.mentionBac = mentionBac;
         this.diplome = diplome;
-        this.dateDiplome = dateDiplome;
+        this.dateDiplome = dateDiplome;*/
 
     }
 
 
+    public String toString(){
+        return "nom :" + nom +"\n" + "prenom : " + prenom+"\n"+"ddn : " + date_de_naissance+"\n"+"dateBac : "+ dateBac;
+    }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -47,9 +51,9 @@ public class Etudiant {
         return prenom;
     }
 
-    public Date getDate_de_naissance() {
+    /*public String getDate_de_naissance() {
         return date_de_naissance;
-    }
+    }*/
 
     public String getCourrielPro() {
         return courrielPro;
@@ -63,7 +67,7 @@ public class Etudiant {
         return serieBac;
     }
 
-    public Date getDateBac() {
+    public String getDateBac() {
         return dateBac;
     }
 
@@ -75,7 +79,7 @@ public class Etudiant {
         return diplome;
     }
 
-    public Date getDateDiplome() {
+    public String getDateDiplome() {
         return dateDiplome;
     }
 }
