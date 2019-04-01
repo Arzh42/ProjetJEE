@@ -52,16 +52,49 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             PreparedStatement statement = co.prepareStatement("INSERT INTO etudiant(nom,prenom,date_de_naissance,courrielPerso,courrielPro,serieBac,dateBac,mentionBac,diplome,dateDiplome) VALUES (?,?,?,?,?,?,?,?,?,?)");
             statement.setString(1,etu.getNom());
             statement.setString(2,etu.getPrenom());
-            statement.setString(2,etu.getDate_de_naissance());
-            statement.setString(2,etu.getCourrielPerso());
-            statement.setString(2,etu.getCourrielPro());
-            statement.setString(2,etu.getSerieBac());
-            statement.setString(2,etu.getDateBac());
-            statement.setString(2,etu.getMentionBac());
-            statement.setString(2,etu.getDiplome());
-            statement.setString(2,etu.getDateDiplome());
+            statement.setString(3,etu.getDate_de_naissance());
+            statement.setString(4,etu.getCourrielPerso());
+            statement.setString(5,etu.getCourrielPro());
+            statement.setString(6,etu.getSerieBac());
+            statement.setString(7,etu.getDateBac());
+            statement.setString(8,etu.getMentionBac());
+            statement.setString(9,etu.getDiplome());
+            statement.setString(10,etu.getDateDiplome());
             int status = statement.executeUpdate();
             System.out.println(status);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateEtudiantById(Etudiant etu,int id) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("UPDATE etudiant SET nom=?,prenom=?,date_de_naissance=?,courrielPerso=?,courrielPro=?,serieBac=?,dateBac=?,mentionBac=?,diplome=?,dateDiplome=? WHERE id=?");
+            statement.setString(1,etu.getNom());
+            statement.setString(2,etu.getPrenom());
+            statement.setString(3,etu.getDate_de_naissance());
+            statement.setString(4,etu.getCourrielPerso());
+            statement.setString(5,etu.getCourrielPro());
+            statement.setString(6,etu.getSerieBac());
+            statement.setString(7,etu.getDateBac());
+            statement.setString(8,etu.getMentionBac());
+            statement.setString(9,etu.getDiplome());
+            statement.setString(10,etu.getDateDiplome());
+            statement.setInt(11,id);
+            int status = statement.executeUpdate();
+            System.out.println(status);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteEtudiantById(int id) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("DELETE FROM etudiant WHERE id=?");
+            statement.setInt(1,id);
+            int status = statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }

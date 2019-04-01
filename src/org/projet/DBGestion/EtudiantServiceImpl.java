@@ -22,4 +22,16 @@ public class EtudiantServiceImpl implements EtudiantService{
         etuDAO.addEtudiant(etu);
     }
 
+    @Override
+    public void updateEtudiantById(Etudiant etu, int id) {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        etuDAO.updateEtudiantById(etu,id);
+    }
+
+    @Override
+    public void deleteEtudiantById(int id) {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        etuDAO.deleteEtudiantById(id);
+
+    }
 }
