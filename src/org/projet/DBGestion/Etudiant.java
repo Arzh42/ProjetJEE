@@ -6,7 +6,7 @@ public class Etudiant {
     private String id;
     private String nom;
     private String prenom;
-    private Date date_de_naissance;
+    private String date_de_naissance;
     private String courrielPro;
     private String courrielPerso;
     private String serieBac;
@@ -18,19 +18,19 @@ public class Etudiant {
     /**
      *
      */
-    public Etudiant(String id,String nom,String prenom,Date date_de_naissance, String dateBac/*,String courrielPro,String courrielPerso,String serieBac,Date dateBac,String mentionBac,String diplome,Date dateDiplome*/) {
+    public Etudiant(String id,String nom,String prenom,String date_de_naissance,String courrielPro,String courrielPerso,String serieBac,String dateBac,String mentionBac,String diplome,String dateDiplome) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.date_de_naissance = date_de_naissance;
         this.dateBac = dateBac;
-        /*this.courrielPro = courrielPro;
+        this.courrielPro = courrielPro;
         this.courrielPerso = courrielPerso;
         this.serieBac = serieBac;
 
         this.mentionBac = mentionBac;
         this.diplome = diplome;
-        this.dateDiplome = dateDiplome;*/
+        this.dateDiplome = dateDiplome;
 
     }
 
@@ -51,9 +51,9 @@ public class Etudiant {
         return prenom;
     }
 
-    /*public String getDate_de_naissance() {
+    public String getDate_de_naissance() {
         return date_de_naissance;
-    }*/
+    }
 
     public String getCourrielPro() {
         return courrielPro;

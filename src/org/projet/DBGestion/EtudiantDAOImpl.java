@@ -44,15 +44,18 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             String id;
             String nom;
             String prenom;
-            Date date_de_naissance;
+            String date_de_naissance;
             String courrielPro;
             String courrielPerso;
             String serieBac;
             String dateBac;
             String mentionBac;
             String diplome;
-            Date dateDiplome;
+            String dateDiplome;
             JsonObject tempo;
+
+            EtudiantDAOImpl  etudiantDAO = new EtudiantDAOImpl();
+
 
             for(int i = 0; i<3;i++){
                 //etuTempo = new Etudiant()
@@ -66,12 +69,12 @@ public class EtudiantDAOImpl implements EtudiantDAO {
                 mentionBac = tempo.getString("menBac");
                 dateBac = tempo.getString("anBac");
                 diplome = tempo.getString("diplome");
-                //dateDiplome = new Date(tempo.getString("anDiplome"));
+                dateDiplome = tempo.getString("anDiplome");
 
                 //date_de_naissance = java.text.DateFormat.getDateInstance().parse(tempo.getString("ddn"));
-                date_de_naissance = new Date(tempo.getString("ddn"));
-                etuTempo = new Etudiant(id, nom, prenom,date_de_naissance,dateBac);
-
+                date_de_naissance = tempo.getString("ddn");
+                etuTempo = new Etudiant(id, nom, prenom,date_de_naissance,courrielPro,courrielPerso,serieBac,dateBac,mentionBac,diplome,dateDiplome);
+                etudiantDAO.addEtudiant(etuTempo);
                 System.out.println(etuTempo.toString());
                 System.out.println("-----------------<<<<<<<<>>>>>>--------------------");
             }
