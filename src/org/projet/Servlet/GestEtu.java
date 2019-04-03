@@ -17,22 +17,64 @@ import java.util.List;
 public class GestEtu extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //this.doProcess(request,response);
-        String nom = request.getParameter("nom");
-        String prenom =  request.getParameter("prenom");
 
-        System.out.println(nom + prenom);
-
-       Etudiant etu  = new Etudiant(
-                "3", nom, prenom,
-                "12/21/1994",
-                "none", "none", "none",
-                "none","none", "none", "none"
-        );
-
+        System.out.println("coucou");
         EtudiantService etudiantService = new EtudiantServiceImpl();
-        etudiantService.addEtudiant(etu);
 
-        this.doProcess(request,response);
+        String state = request.getParameter("state");
+
+        if (state != null && state.equals("suppr")) {
+            String id = request.getParameter("id");
+            System.out.println("suppr" + request.getParameter("id"));
+
+           Etudiant etudiant = etudiantService.getEtudiantsById(id);
+
+           etudiantService.supprEtudiant(etudiant);
+
+        }
+        else if (state != null && state.equals("modif")) {
+
+            String prenom = request.getParameter("prenom");
+            String nom = request.getParameter("nom");
+            String id = request.getParameter("id");
+
+            Etudiant etuAchanger, etudiantModif;
+
+            etuAchanger = etudiantService.getEtudiantsById(id);
+
+            etudiantModif = new Etudiant(
+                    "3", nom, prenom,
+                    "12/21/1994",
+                    "none", "none", "none",
+                    "none", "none", "none", "none"
+            );
+
+            etudiantService.modifEtudiant(etuAchanger,etudiantModif);
+
+            System.out.println("modif"+request.getParameter("id"));
+            this.doProcess(request, response);
+
+
+        }
+
+        else {
+            System.out.println("creation");
+            String nom = request.getParameter("nom");
+            String prenom = request.getParameter("prenom");
+
+            System.out.println(nom + prenom);
+
+            Etudiant etu = new Etudiant(
+                    "3", nom, prenom,
+                    "12/21/1994",
+                    "none", "none", "none",
+                    "none", "none", "none", "none"
+            );
+
+            etudiantService.addEtudiant(etu);
+            this.doProcess(request, response);
+
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

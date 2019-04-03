@@ -27,7 +27,7 @@
         String nom = etu.getNom();
         String prenom = etu.getPrenom();
     %>
-      <li id="etu<%=id%>" onclick=""><%=nom%> <%=prenom%></li>
+      <li id="<%=id%>" onclick=""><%=nom%> <%=prenom%></li>
     <%
       }
     %>
@@ -40,16 +40,31 @@
       <button id="suppr_etu">Supprimer l'étudiant</button>
 
       <div id="formCreation" style="display: none">
-        <form method="post" action="GestEtu">
+        <form method="post" action="GestEtu" >
           <br>
           Nom:<br>
-          <input type="text" name="nom" value="">
+          <input type="text" id="nom" name="nom" value="">
           <br>
           Prenom:<br>
-          <input type="text" name="prenom" value="">
+          <input type="text" id="prenom" name="prenom" value="">
 
           <br><br>
           <input type="submit" id="submit" value="Submit">
+        </form>
+      </div>
+
+      <div id="formModif" style="display: none">
+        <form method="post" action="GestEtu">
+          <br>
+          Nom:<br>
+          <input type="text" id="nomModif" name="nom" value="">
+          <br>
+          Prenom:<br>
+          <input type="text" id="prenomModif" name="prenom" value="">
+          <input type="text" style="display: none" name="state" value="modif">
+          <input type="text" style="display: none" id="idcache" name="id" value="">
+          <br><br>
+          <input type="submit" id="submitModif" value="Submit Modif">
         </form>
       </div>
     </div>

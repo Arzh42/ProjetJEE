@@ -160,21 +160,19 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     @Override
     public void supprEtudiant(Etudiant etu) {
-       System.out.println("teest 1");
         Connection co = DBManager.getInstance().getConnection();
-        System.out.println("test 2 ");
+
 
         try {
-            System.out.println("<<<<<<<   on est dans la requete >>>>>>>>");
+
             PreparedStatement statement = co.prepareStatement("DELETE FROM etudiant WHERE nom=? AND prenom= ? AND date_de_naissance = ?");
             statement.setString(1, etu.getNom());
             statement.setString(2, etu.getPrenom());
             statement.setString(3, etu.getDate_de_naissance());
-            System.out.println("<<<<<<<   on execute la requete >>>>>>>>");
+
             statement.executeUpdate();
-            System.out.println("<<<<<<<   on cleanup >>>>>>>>");
             DBManager.getInstance().cleanup(co,statement,null);
-            System.out.println(statement.toString());
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
