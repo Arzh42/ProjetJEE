@@ -42,4 +42,27 @@ public class EtudiantServiceImpl implements EtudiantService{
         EtudiantDAO etuDAO = new EtudiantDAOImpl();
         etuDAO.addGroupe(g);
     }
+    @Override
+    public void supprEtudiant(Etudiant etu) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.supprEtudiant(etu);
+    }
+
+    @Override
+    public void modifEtudiant(Etudiant etuAmodif, Etudiant etudiantModifie) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.modifEtudiant( etuAmodif, etudiantModifie);
+    }
+
+    @Override
+    public void supprGroupe(Groupe g) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.supprGroupe(g);
+    }
+
+    @Override
+    public void modifGroupe(Groupe gAmodif, Groupe gModifie) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.modifGroupe( gAmodif, gModifie);
+    }
 }

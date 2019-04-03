@@ -8,11 +8,11 @@
 
               username="root"
 
-              password=""
+              password="thomas"
 
               driverClassName="com.mysql.jdbc.Driver"
 
-              url="jdbc:mysql://localhost:3306/projetjee"
+              url="jdbc:mysql://localhost:3306/JEEBase"
 
               maxActive="15"
 

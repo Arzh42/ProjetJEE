@@ -66,8 +66,8 @@ public class EtudiantDAOImpl implements EtudiantDAO {
                 id = tempo.getString("numetudiant");
                 prenom = tempo.getString("prenom");
                 nom = tempo.getString("nom");
-                courrielPro = tempo.getString("emailPro");
                 courrielPerso = tempo.getString("emailPerso");
+                courrielPro = tempo.getString("emailPro");
                 serieBac = tempo.getString("bac");
                 mentionBac = tempo.getString("menBac");
                 dateBac = tempo.getString("anBac");
@@ -77,7 +77,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
                 //date_de_naissance = java.text.DateFormat.getDateInstance().parse(tempo.getString("ddn"));
                 date_de_naissance = tempo.getString("ddn");
                 System.out.println("<<<avant etudiant>>>>>>>>");
-                etuTempo = new Etudiant(id, nom, prenom, date_de_naissance, courrielPro, courrielPerso, serieBac, dateBac, mentionBac, diplome, dateDiplome);
+                etuTempo = new Etudiant(id, nom, prenom, date_de_naissance, courrielPerso, courrielPro, serieBac, dateBac, mentionBac, diplome, dateDiplome);
                 etudiantDAO.addEtudiant(etuTempo);
                 System.out.println(etuTempo.toString());
                 System.out.println("-----------------<<<<<<<<>>>>>>--------------------");
@@ -214,6 +214,58 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         }
     }
 
+    @Override
+    public void supprEtudiant(Etudiant etu) {
+        Connection co = DBManager.getInstance().getConnection();
+
+
+        try {
+
+            PreparedStatement statement = co.prepareStatement("DELETE FROM etudiant WHERE nom=? AND prenom= ? AND date_de_naissance = ?");
+            statement.setString(1, etu.getNom());
+            statement.setString(2, etu.getPrenom());
+            statement.setString(3, etu.getDate_de_naissance());
+
+            statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public void supprGroupe(Groupe g) {
+        Connection co = DBManager.getInstance().getConnection();
+
+
+        try {
+
+            PreparedStatement statement = co.prepareStatement("DELETE FROM Groupe WHERE nom=?");
+            statement.setString(1, g.getNom());
+
+            statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public void modifEtudiant(Etudiant etuAmodif, Etudiant etuModifie) {
+            this.supprEtudiant(etuAmodif);
+            this.addEtudiant(etuModifie);
+    }
+
+    @Override
+    public void modifGroupe(Groupe gAmodif, Groupe gModifie) {
+        this.supprGroupe(gAmodif);
+        this.addGroupe(gModifie);
+    }
+
     private void BuildEtudiantFromReq(List<Etudiant> list, ResultSet rs) throws SQLException {
         while(rs.next()) {
             String id = rs.getString("id");
@@ -242,7 +294,22 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         }
     }
 
+    public static void test(){
+        EtudiantService etudiantService = new EtudiantServiceImpl();
+
+        etudiantService.supprEtudiant(
+                new Etudiant(
+                        "3", "Kelly", "Gilbert",
+                        "12/21/1994",
+                        "none", "none", "none",
+                        "none","none", "none", "none"
+                )
+        );
+    }
+
     public static void main(String args[]){
            // EtudiantDAOImpl.saveDatasInDB("outputRead/output.json");
+
+
     }
 }

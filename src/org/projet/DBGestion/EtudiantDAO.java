@@ -14,4 +14,12 @@ public interface EtudiantDAO {
     Groupe findGByNom(String nom);
 
     void addGroupe(Groupe g);
+
+    void supprEtudiant(Etudiant etu);
+
+    void modifEtudiant(Etudiant etuAmodif, Etudiant etuModifie);
+
+    void supprGroupe(Groupe g);
+
+    void modifGroupe(Groupe gAmodif, Groupe gModifie);
 }

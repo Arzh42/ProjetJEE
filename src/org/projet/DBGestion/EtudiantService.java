@@ -14,4 +14,12 @@ public interface EtudiantService {
     Groupe getGroupeByNom(String nom);
 
     void addGroupe(Groupe g);
+
+    void supprEtudiant(Etudiant etu);
+
+    void modifEtudiant(Etudiant etuAmodif, Etudiant etudiantModifie);
+
+    void supprGroupe(Groupe g);
+
+    void modifGroupe(Groupe gAmodif, Groupe groupeModifie);
 }
