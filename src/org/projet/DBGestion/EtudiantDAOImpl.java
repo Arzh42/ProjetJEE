@@ -162,14 +162,14 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             int id = rs.getInt("id");
             String nom = rs.getString("nom");
             String prenom = rs.getString("prenom");
-            Date date_de_naissance = rs.getDate("date_de_naissance");
+            String date_de_naissance = rs.getString("date_de_naissance");
             String courrielPro= rs.getString("courrielPro");
             String courrielPerso = rs.getString("courrielPerso");
             String serieBac = rs.getString("serieBac");
-            Date dateBac = rs.getDate("dateBac");
+            String dateBac = rs.getString("dateBac");
             String mentionBac = rs.getString("mentionBac");
             String diplome = rs.getString("diplome");
-            Date dateDiplome = rs.getDate("dateDiplome");
+            String dateDiplome = rs.getString("dateDiplome");
             //Etudiant etudiant = new Etudiant(id,nom,prenom,date_de_naissance,courrielPro,courrielPerso,serieBac,dateBac,mentionBac,diplome,dateDiplome);
             //list.add(etudiant);
         }

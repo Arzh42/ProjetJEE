@@ -23,7 +23,7 @@
   <ul id="listeEtu">
     <%
       for (Etudiant etu : listEtudiants) {
-        int id = etu.getId();
+        String id = etu.getId();
         String nom = etu.getNom();
         String prenom = etu.getPrenom();
     %>

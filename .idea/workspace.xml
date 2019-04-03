@@ -7,101 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a46beb27-1009-4877-b621-15d6b781a447" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.47.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetJEE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetJEE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/tutorial/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/tutorial/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/META-INF/maven/org.glassfish/javax.json/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/META-INF/maven/org.glassfish/javax.json/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/Json.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonArrayBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonBuilderFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonObjectBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonReaderFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonStructure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/JsonWriterFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/spi/JsonProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/stream/JsonGenerationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/stream/JsonGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/stream/JsonGeneratorFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/stream/JsonLocation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/stream/JsonParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/stream/JsonParserFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/javax/json/stream/JsonParsingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/BufferPoolImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonArrayBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonBuilderFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonGeneratorFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonGeneratorImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonLocationImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonMessages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonNumberImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonObjectBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonParserFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonParserImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonPrettyGeneratorImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonProviderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonReaderFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonReaderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonStringImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonStructureParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonTokenizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonWriterFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/JsonWriterImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/UnicodeDetectingInputStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/api/BufferPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-1.0.4.jar/org/glassfish/json/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/META-INF/maven/javax.json/javax.json-api/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/META-INF/maven/javax.json/javax.json-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/EmptyArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/EmptyObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/Json.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonArrayBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonBuilderFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonMergePatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonObjectBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonPatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonPatchBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonPointer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonReaderFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonStructure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonValueImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/JsonWriterFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/spi/JsonProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonCollectors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonGenerationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonGeneratorFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonLocation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonParserFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/javax/json/stream/JsonParsingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/javax.json-api-1.1.4.jar/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.12-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -161,11 +68,11 @@
     <splitter split-orientation="vertical" split-proportion="0.8977505">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+                <state relative-caret-position="167">
+                  <caret line="171" column="46" lean-forward="true" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -176,17 +83,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1095">
+                <state relative-caret-position="54">
                   <caret line="73" column="48" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="48" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b8226437-9194-4830-8a47-96b11b6059bc/console.sql">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="22" selection-start-column="22" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -201,22 +99,31 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/GestGroupe.java">
+            <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+                <state relative-caret-position="-148">
+                  <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java">
+            <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/GestEtu.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="384">
+                  <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="61">
+                  <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -264,11 +171,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/outputRead/output.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1">
                   <caret line="1597" column="24" selection-start-line="1597" selection-start-column="24" selection-end-line="1597" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1">
+                  <caret line="28" selection-start-line="28" selection-end-line="28" />
                 </state>
               </provider>
             </entry>
@@ -299,7 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/projet/EtudiantService.java" />
         <option value="$PROJECT_DIR$/web/etu_data.jsp" />
         <option value="$PROJECT_DIR$/src/org/projet/Authentificator.java" />
         <option value="$PROJECT_DIR$/src/loginConfig.jaas" />
@@ -349,6 +264,7 @@
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToFile.java" />
         <option value="$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java" />
         <option value="$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" />
       </list>
     </option>
@@ -472,8 +388,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554301325208" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554302434683" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.12-bin.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -658,12 +574,12 @@
       <workItem from="1553958923203" duration="785000" />
       <workItem from="1554030355923" duration="11201000" />
       <workItem from="1554100104442" duration="9998000" />
-      <workItem from="1554301141000" duration="279000" />
+      <workItem from="1554301141000" duration="1124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70417000" />
+    <option name="totallyTimeSpent" value="71262000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,7 +593,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.21647818" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.21647818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -687,7 +603,7 @@
       <window_info id="Web" order="7" sideWeight="0.50151056" side_tool="true" weight="0.2185501" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -700,14 +616,14 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32901135" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="15" visible="true" weight="0.39041096" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.14657535" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.134895" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.33117932" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -791,7 +707,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/projet/Authentificator.java" />
     <entry file="file://$PROJECT_DIR$/src/loginConfig.jaas" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/GestGroupe.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -881,13 +796,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/GestEtu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1034,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1051,23 +952,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="48" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1082,16 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1137,6 +1011,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
           <caret line="1597" column="24" selection-start-line="1597" selection-start-column="24" selection-end-line="1597" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="73" column="48" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-148">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/GestEtu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="171" column="46" lean-forward="true" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
