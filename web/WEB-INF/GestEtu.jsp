@@ -27,7 +27,7 @@
         String nom = etu.getNom();
         String prenom = etu.getPrenom();
     %>
-      <li id="etu<%=id%>"><%=nom%> <%=prenom%></li>
+      <li id="etu<%=id%>" onclick=""><%=nom%> <%=prenom%></li>
     <%
       }
     %>
