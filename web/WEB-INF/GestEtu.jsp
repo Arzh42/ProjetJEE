@@ -32,14 +32,28 @@
       }
     %>
   </ul>
-  <section>
+
     <div id="etu_data"></div>
     <div id="action">
       <button id="create_etu">Créer un nouvel étudiant</button>
       <button id="modif_etu">Modifier l'étudiant</button>
       <button id="suppr_etu">Supprimer l'étudiant</button>
+
+      <div id="formCreation" style="display: none">
+        <form method="post" action="GestEtu">
+          <br>
+          Nom:<br>
+          <input type="text" name="nom" value="">
+          <br>
+          Prenom:<br>
+          <input type="text" name="prenom" value="">
+
+          <br><br>
+          <input type="submit" id="submit" value="Submit">
+        </form>
+      </div>
     </div>
-  </section>
+
 
 </body>
 </html>

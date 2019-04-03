@@ -8,4 +8,8 @@ public interface EtudiantDAO {
     Etudiant findById(String id);
 
     void addEtudiant(Etudiant etu);
+
+    void supprEtudiant(Etudiant etu);
+
+    void modifEtudiant(Etudiant etuAmodif, Etudiant etuModifie);
 }

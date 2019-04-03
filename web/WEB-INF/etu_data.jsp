@@ -3,6 +3,7 @@
 <%
     Etudiant etu = (Etudiant) request.getAttribute("Etudiant");
 %>
+<span class="etu_data_item" id="id"><%=etu.getId()%></span>
 <span class="etu_data_item" id="prenom"><%=etu.getPrenom()%></span>
 <span class="etu_data_item" id="nom"><%=etu.getNom()%></span>
 <span class="etu_data_item" id="date_de_naissance"><%=etu.getDate_de_naissance()%></span>

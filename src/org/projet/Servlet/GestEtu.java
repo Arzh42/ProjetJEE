@@ -1,6 +1,7 @@
 package org.projet.Servlet;
 
 import org.projet.DBGestion.Etudiant;
+import org.projet.DBGestion.EtudiantDAOImpl;
 import org.projet.DBGestion.EtudiantService;
 import org.projet.DBGestion.EtudiantServiceImpl;
 
@@ -13,9 +14,24 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "Servlet")
 public class GestEtu extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //this.doProcess(request,response);
+        String nom = request.getParameter("nom");
+        String prenom =  request.getParameter("prenom");
+
+        System.out.println(nom + prenom);
+
+       Etudiant etu  = new Etudiant(
+                "3", nom, prenom,
+                "12/21/1994",
+                "none", "none", "none",
+                "none","none", "none", "none"
+        );
+
+        EtudiantService etudiantService = new EtudiantServiceImpl();
+        etudiantService.addEtudiant(etu);
+
         this.doProcess(request,response);
     }
 
@@ -30,6 +46,8 @@ public class GestEtu extends HttpServlet {
         List<Etudiant> listEtudiants = etuService.getAllEtudiants();
         System.out.println("<<<<<<<<on a la liste : >>>>>>>>>>>>> \n");
         System.out.println(listEtudiants);
+
+        EtudiantDAOImpl.test();
         request.setAttribute("listEtudiants",listEtudiants);
 
 
