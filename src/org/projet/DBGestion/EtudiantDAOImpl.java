@@ -106,8 +106,10 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
         try {
             Statement statement = co.createStatement();
+            System.out.println("<<<<<méthode findByAll >>>>>>");
             ResultSet rs = statement.executeQuery("select * from etudiant");
             BuildEtudiantFromReq(list, rs);
+            System.out.println(list);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -159,7 +161,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     private void BuildEtudiantFromReq(List<Etudiant> list, ResultSet rs) throws SQLException {
         while(rs.next()) {
-            int id = rs.getInt("id");
+            String id = rs.getString("id");
             String nom = rs.getString("nom");
             String prenom = rs.getString("prenom");
             String date_de_naissance = rs.getString("date_de_naissance");
@@ -170,8 +172,8 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             String mentionBac = rs.getString("mentionBac");
             String diplome = rs.getString("diplome");
             String dateDiplome = rs.getString("dateDiplome");
-            //Etudiant etudiant = new Etudiant(id,nom,prenom,date_de_naissance,courrielPro,courrielPerso,serieBac,dateBac,mentionBac,diplome,dateDiplome);
-            //list.add(etudiant);
+            Etudiant etudiant = new Etudiant(id,nom,prenom,date_de_naissance,courrielPro,courrielPerso,serieBac,dateBac,mentionBac,diplome,dateDiplome);
+            list.add(etudiant);
         }
     }
 

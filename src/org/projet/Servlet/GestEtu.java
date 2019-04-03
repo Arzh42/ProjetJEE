@@ -26,7 +26,10 @@ public class GestEtu extends HttpServlet {
 
         //Récupération des données de liste des étudiants
         EtudiantService etuService = new EtudiantServiceImpl();
+        System.out.println("<<<<<<<On va chercher la liste>>>>>>>");
         List<Etudiant> listEtudiants = etuService.getAllEtudiants();
+        System.out.println("<<<<<<<<on a la liste : >>>>>>>>>>>>> \n");
+        System.out.println(listEtudiants);
         request.setAttribute("listEtudiants",listEtudiants);
 
 
