@@ -2,9 +2,11 @@ package org.projet.DBGestion;
 
 import org.tutorial.DBManager;
 
-import javax.json.*;
-import javax.json.stream.JsonLocation;
-import javax.json.stream.JsonParser;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -30,14 +32,16 @@ public class EtudiantDAOImpl implements EtudiantDAO {
     public static void saveDatasInDB(String filePath){
         try {
 
-
+            System.out.println("<<<ENTREEE saveDatas >>>>>>>>");
             InputStream fis = new FileInputStream(filePath);
-
-            JsonReader reader = Json.createReader(fis);
+            System.out.println("<<< Juste avant JSON >>>>>>>>");
+             JsonReader reader = Json.createReader(fis);
 
             JsonArray jsonArray = reader.readArray();
 
             reader.close();
+
+            System.out.println("<<<on a lu le fichier >>>>>>>>");
 
             Etudiant etuTempo ;
 
@@ -54,11 +58,12 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             String dateDiplome;
             JsonObject tempo;
 
-            EtudiantDAOImpl  etudiantDAO = new EtudiantDAOImpl();
+            EtudiantServiceImpl  etudiantDAO = new EtudiantServiceImpl();
 
 
             for(int i = 0; i<3;i++){
                 //etuTempo = new Etudiant()
+                System.out.println("<<<entrée Boucle >>>>>>>>");
                 tempo = (JsonObject) jsonArray.get(i);
                 id = tempo.getString("numetudiant");
                 prenom = tempo.getString("prenom");
@@ -73,6 +78,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
                 //date_de_naissance = java.text.DateFormat.getDateInstance().parse(tempo.getString("ddn"));
                 date_de_naissance = tempo.getString("ddn");
+                System.out.println("<<<avant etudiant>>>>>>>>");
                 etuTempo = new Etudiant(id, nom, prenom,date_de_naissance,courrielPro,courrielPerso,serieBac,dateBac,mentionBac,diplome,dateDiplome);
                 etudiantDAO.addEtudiant(etuTempo);
                 System.out.println(etuTempo.toString());
@@ -81,16 +87,14 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             //System.out.println(jsonArray);
 
             // DB connection setup
-            Connection con = DBManager.getInstance().getConnection();
+            //Connection con = DBManager.getInstance().getConnection();
 
             // PreparedStatements
-            PreparedStatement preparedStatement = con.prepareStatement("insert into  Table_Name values (?, ?, ?, ? )");
+            //PreparedStatement preparedStatement = con.prepareStatement("insert into  Table_Name values (?, ?, ?, ? )");
 
 
 
-    } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
+    } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -138,14 +142,14 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             PreparedStatement statement = co.prepareStatement("INSERT INTO etudiant(nom,prenom,date_de_naissance,courrielPerso,courrielPro,serieBac,dateBac,mentionBac,diplome,dateDiplome) VALUES (?,?,?,?,?,?,?,?,?,?)");
             statement.setString(1,etu.getNom());
             statement.setString(2,etu.getPrenom());
-            statement.setString(2,etu.getDate_de_naissance());
-            statement.setString(2,etu.getCourrielPerso());
-            statement.setString(2,etu.getCourrielPro());
-            statement.setString(2,etu.getSerieBac());
-            statement.setString(2,etu.getDateBac());
-            statement.setString(2,etu.getMentionBac());
-            statement.setString(2,etu.getDiplome());
-            statement.setString(2,etu.getDateDiplome());
+            statement.setString(3,etu.getDate_de_naissance());
+            statement.setString(4,etu.getCourrielPerso());
+            statement.setString(5,etu.getCourrielPro());
+            statement.setString(6,etu.getSerieBac());
+            statement.setString(7,etu.getDateBac());
+            statement.setString(8,etu.getMentionBac());
+            statement.setString(9,etu.getDiplome());
+            statement.setString(10,etu.getDateDiplome());
             int status = statement.executeUpdate();
             System.out.println(status);
         } catch (SQLException e) {
@@ -173,6 +177,6 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
 
     public static void main(String args[]){
-
+            EtudiantDAOImpl.saveDatasInDB("outputRead/output.json");
     }
 }

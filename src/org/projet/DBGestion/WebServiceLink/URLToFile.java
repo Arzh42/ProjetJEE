@@ -32,11 +32,15 @@ public class URLToFile {
 
         }
 
+        public static void test(){
+            EtudiantDAOImpl.saveDatasInDB("/Users/thomas/Downloads/ProjetJEE/outputRead/output.json");
+        }
+
         public static void main(String[] args){
 
 
             //URLToFile.process("https://stormy-lowlands-39083.herokuapp.com/etudiants/", "outputRead/output.json");
-            EtudiantDAOImpl.saveDatasInDB("outputRead/output.json");
+
 
 
 

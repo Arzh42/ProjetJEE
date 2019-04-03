@@ -1,5 +1,7 @@
 package org.tutorial;
 
+import org.projet.DBGestion.WebServiceLink.URLToFile;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,6 +29,8 @@ public class MainServlet extends HttpServlet {
         String pageName="/accueil.jsp";
         RequestDispatcher rd =
                 getServletContext().getRequestDispatcher(pageName);
+
+
         try {
             rd.forward(request, response);
         } catch (ServletException e) {

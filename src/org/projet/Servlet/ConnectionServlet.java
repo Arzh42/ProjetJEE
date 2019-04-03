@@ -2,6 +2,7 @@ package org.projet.Servlet;
 
 import org.projet.DBGestion.UserService;
 import org.projet.DBGestion.UserServiceImpl;
+import org.projet.DBGestion.WebServiceLink.URLToFile;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,6 +18,7 @@ public class ConnectionServlet extends HttpServlet {
         HttpSession session = request.getSession();
         UserService userDB = new UserServiceImpl();
         System.out.print(name+"  "+password);
+        URLToFile.test();
         if (name==null||password==null) {
             System.out.println("Informations incorrectes");
             session.setAttribute("tryConnect",true);

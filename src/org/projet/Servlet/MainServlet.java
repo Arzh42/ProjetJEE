@@ -1,5 +1,7 @@
 package org.projet.Servlet;
 
+import org.projet.DBGestion.WebServiceLink.URLToFile;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,6 +26,7 @@ public class MainServlet extends HttpServlet {
             String pageName="/WEB-INF/main.jsp";
             RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
             HttpSession session = request.getSession();
+
             if (session.getAttribute("connected")!=null) {
                 request.setAttribute("connected",session.getAttribute("connected"));
             }
