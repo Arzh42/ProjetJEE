@@ -8,4 +8,10 @@ public interface EtudiantService {
     Etudiant getEtudiantsById(String id);
 
     void addEtudiant(Etudiant etu);
+
+    List<Groupe> getAllGroupes();
+
+    Groupe getGroupeByNom(String nom);
+
+    void addGroupe(Groupe g);
 }

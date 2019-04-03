@@ -8,4 +8,10 @@ public interface EtudiantDAO {
     Etudiant findById(String id);
 
     void addEtudiant(Etudiant etu);
+
+    List<Groupe> findGByAll();
+
+    Groupe findGByNom(String nom);
+
+    void addGroupe(Groupe g);
 }

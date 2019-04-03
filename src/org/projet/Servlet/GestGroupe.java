@@ -1,5 +1,9 @@
 package org.projet.Servlet;
 
+import org.projet.DBGestion.Groupe;
+import org.projet.DBGestion.EtudiantService;
+import org.projet.DBGestion.EtudiantServiceImpl;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +23,14 @@ public class GestGroupe extends HttpServlet {
         this.doProcess(request,response);
     }
     private void doProcess(HttpServletRequest request, HttpServletResponse response) {
+
+        //Récupération des données de liste des étudiants
+        EtudiantService etuService = new EtudiantServiceImpl();
+        System.out.println("<<<<<<<On va chercher la liste>>>>>>>");
+        List<Groupe> listGroupes = etuService.getAllGroupes();
+        System.out.println("<<<<<<<<on a la liste : >>>>>>>>>>>>> \n");
+        System.out.println(listGroupes);
+        request.setAttribute("listGroupes",listGroupes);
 
         //Récupération et envoie de la page
         String pageName="/WEB-INF/GestGroupe.jsp";

@@ -6,9 +6,9 @@
 
               type="javax.sql.DataSource"
 
-              username="toto"
+              username="root"
 
-              password="toto"
+              password=""
 
               driverClassName="com.mysql.jdbc.Driver"
 

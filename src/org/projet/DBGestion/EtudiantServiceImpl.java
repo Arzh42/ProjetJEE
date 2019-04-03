@@ -23,4 +23,23 @@ public class EtudiantServiceImpl implements EtudiantService{
         etuDAO.addEtudiant(etu);
     }
 
+    @Override
+    public List<Groupe> getAllGroupes() {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        return etuDAO.findGByAll();
+    }
+
+
+    @Override
+    public Groupe getGroupeByNom(String nom) {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        System.out.println(etuDAO.toString());
+        return etuDAO.findGByNom(nom);
+    }
+
+    @Override
+    public void addGroupe(Groupe g) {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        etuDAO.addGroupe(g);
+    }
 }
