@@ -5,6 +5,7 @@ window.onload = function(){
   });
 
   function loadEtuPage(id) {
+      console.log(id);
       $('#etu_data').load("etu_data?id="+id);
   }
 };

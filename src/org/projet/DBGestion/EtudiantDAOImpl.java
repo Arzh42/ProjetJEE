@@ -103,6 +103,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             ResultSet rs = statement.executeQuery("select * from etudiant");
             BuildEtudiantFromReq(list, rs);
             System.out.println(list);
+            DBManager.getInstance().cleanup(co,statement,rs);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -111,22 +112,27 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     @Override
     public Etudiant findById(String idIn) {
+        System.out.println("test0");
         Connection co = DBManager.getInstance().getConnection();
         List<Etudiant> list = new ArrayList<>();
+        System.out.println("test1");
 
         try {
             Statement statement = co.createStatement();
             ResultSet rs = statement.executeQuery("select * from etudiant where id="+idIn);
+            System.out.println("test2");
             BuildEtudiantFromReq(list, rs);
+            if (list.size()>1) {
+                System.out.println("Erreur retour multiple sur un appel par id");
+                return null;
+            }
+            else {
+                DBManager.getInstance().cleanup(co,statement,rs);
+                return list.get(0);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        if (list.size()>1) {
-            System.out.println("Erreur retour multiple sur un appel par id");
             return null;
-        }
-        else {
-            return list.get(0);
         }
     }
 
@@ -146,7 +152,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             statement.setString(9,etu.getDiplome());
             statement.setString(10,etu.getDateDiplome());
             int status = statement.executeUpdate();
-            System.out.println(status);
+            DBManager.getInstance().cleanup(co,statement,null);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -170,8 +176,4 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         }
     }
 
-
-    public static void main(String args[]){
-           // EtudiantDAOImpl.saveDatasInDB("outputRead/output.json");
-    }
 }

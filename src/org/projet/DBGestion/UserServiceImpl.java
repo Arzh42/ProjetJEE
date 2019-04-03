@@ -53,6 +53,7 @@ public class UserServiceImpl implements UserService {
             statement.setString(2,name);
             int status = statement.executeUpdate();
             System.out.println(status);
+            DBManager.getInstance().cleanup(co,statement,null);
         } catch (SQLException e) {
             e.printStackTrace();
         }

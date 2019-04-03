@@ -13,6 +13,7 @@ public class EtudiantServiceImpl implements EtudiantService{
     @Override
     public Etudiant getEtudiantsById(String id) {
         EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        System.out.println(etuDAO.toString());
         return etuDAO.findById(id);
     }
 
