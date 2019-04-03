@@ -176,4 +176,8 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         }
     }
 
+
+    public static void main(String args[]){
+           // EtudiantDAOImpl.saveDatasInDB("outputRead/output.json");
+    }
 }
