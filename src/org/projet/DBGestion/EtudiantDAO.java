@@ -9,7 +9,17 @@ public interface EtudiantDAO {
 
     void addEtudiant(Etudiant etu);
 
+    List<Groupe> findGByAll();
+
+    Groupe findGByNom(String nom);
+
+    void addGroupe(Groupe g);
+
     void supprEtudiant(Etudiant etu);
 
     void modifEtudiant(Etudiant etuAmodif, Etudiant etuModifie);
+
+    void supprGroupe(Groupe g);
+
+    void modifGroupe(Groupe gAmodif, Groupe gModifie);
 }

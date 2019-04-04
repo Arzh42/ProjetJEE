@@ -6,13 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a46beb27-1009-4877-b621-15d6b781a447" name="Default Changelist" comment="">
+    <list default="true" id="06ffa0ca-bd6d-49bf-8f69-34dbe0c97915" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/Servlet/GestEtu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/Servlet/GestEtu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/javascripts/GestEtu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascripts/GestEtu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,32 +30,46 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="JEEBase@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="projetjee@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="JEEBase@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="projetjee@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="JEEBase@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="projetjee@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="JEEBase: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="projetjee: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="JEEBase@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="projetjee@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="JEEBase: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="projetjee: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="etjoingrp: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="projetjee@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="projetjee: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="etudiant: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="JEEBase@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="projetjee@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="JEEBase: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="roles: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="projetjee: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="groupe: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="projetjee@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="projetjee: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -190,6 +199,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -218,13 +232,14 @@
         <option value="$PROJECT_DIR$/output.json" />
         <option value="$PROJECT_DIR$/ProjetJEE.iml" />
         <option value="$PROJECT_DIR$/outputRead/output.json" />
-        <option value="$PROJECT_DIR$/src/org/projet/DBGestion/Etudiant.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/etu_data.jsp" />
         <option value="$PROJECT_DIR$/src/org/tutorial/MainServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp" />
+        <option value="$PROJECT_DIR$/src/org/projet/Servlet/GestEtu.java" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToFile.java" />
         <option value="$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/etu_data.jsp" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantService.java" />
-        <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAO.java" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToFile.java" />
         <option value="$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java" />
@@ -319,8 +334,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="projet" type="462c0819:PsiDirectoryNode" />
-              <item name="DBGestion" type="462c0819:PsiDirectoryNode" />
-              <item name="WebServiceLink" type="462c0819:PsiDirectoryNode" />
+              <item name="Filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetJEE" type="b2602c69:ProjectViewProjectNode" />
@@ -339,19 +353,7 @@
               <item name="ProjetJEE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetJEE" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetJEE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetJEE" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetJEE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetJEE" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetJEE" type="b2602c69:ProjectViewProjectNode" />
@@ -380,11 +382,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554330116703" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554303009141" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.12-bin.jar!/" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -458,7 +459,6 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.16" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.16" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ProjetJEE_war_exploded/main" />
       <deployment>
         <artifact name="ProjetJEE:war exploded">
           <settings>
@@ -571,6 +571,14 @@
       <workItem from="1554301141000" duration="1670000" />
       <workItem from="1554380746574" duration="8602000" />
     </task>
+    <task id="LOCAL-00001" summary="grp2">
+      <created>1554335647496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554335647496</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -604,7 +612,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32739726" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.33972603" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3260274" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3260274" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -612,7 +620,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32901135" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.30547947" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.21529745" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -702,11 +710,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="grp2" />
+    <option name="LAST_COMMIT_MESSAGE" value="grp2" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/erreur.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="315">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -715,39 +727,36 @@
     <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/output.json" />
     <entry file="file://$PROJECT_DIR$/ProjetJEE.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/tutorial/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="85">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/projet/Filter/UserFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/tutorial/BookDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="195">
+          <caret line="63" column="56" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/tutorial/BookDAOMockImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -910,7 +919,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/Groupe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
@@ -1079,7 +1088,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web (ProjetJEE)|Web</last-edited>
+          <last-edited>Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1091,7 +1100,6 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>javax.servlet:jstl:1.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1103,7 +1111,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>11</last-edited>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1139,7 +1147,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>javax.json-1.0.4</last-edited>
+          <last-edited>jdbc (2)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

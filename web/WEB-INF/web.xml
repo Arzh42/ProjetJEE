@@ -54,8 +54,8 @@
         <servlet-class>org.projet.Servlet.getQuestionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>changeQuestion</servlet-name>
-        <url-pattern>/user/changeQuestion</url-pattern>
+        <servlet-name>getQuestion</servlet-name>
+        <url-pattern>/user/getQuestion</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>ConnectionServlet</servlet-name>
