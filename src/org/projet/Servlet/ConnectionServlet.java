@@ -26,7 +26,6 @@ public class ConnectionServlet extends HttpServlet {
         else {
             if (userDB.verifyUserIdentity(name,password)) {
                 try {
-                    System.out.println(userDB.getUserRole(name));
                     session.setAttribute("role",userDB.getUserRole(name));
                     session.setAttribute("name",name);
                     session.setAttribute("connected",true);
