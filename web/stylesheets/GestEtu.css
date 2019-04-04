@@ -6,21 +6,19 @@ h1 {
     text-align: center;
 }
 #listeEtu {
-    position:absolute;
     top:100px;
     bottom:0;
     width:150px;
+    float: left;
 }
-section {
-    position: absolute;
-    top:100px;
-    left:200px;
-    right:0;
-    bottom:0;
-}
+
 #etu_data{
     height:200px;
 }
 li {
   margin-bottom: 50px;
+}
+
+#action{
+    float: right;
 }

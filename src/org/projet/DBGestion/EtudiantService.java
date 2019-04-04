@@ -8,4 +8,8 @@ public interface EtudiantService {
     Etudiant getEtudiantsById(String id);
 
     void addEtudiant(Etudiant etu);
+
+    void supprEtudiant(Etudiant etu);
+
+    void modifEtudiant(Etudiant etuAmodif, Etudiant etudiantModifie);
 }

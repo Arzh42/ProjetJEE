@@ -4,3 +4,5 @@ web/WEB-INF/context.xml
 out/
 
 \.idea/workspace\.xml
+
+\.idea/misc\.xml
