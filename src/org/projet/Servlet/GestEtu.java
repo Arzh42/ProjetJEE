@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -22,8 +23,10 @@ public class GestEtu extends HttpServlet {
         EtudiantService etudiantService = new EtudiantServiceImpl();
 
         String state = request.getParameter("state");
+        HttpSession session = request.getSession();
+        String role = (String) session.getAttribute("role");
+        if (state != null && state.equals("suppr")&&(role.equals("admin") || role.equals("editor"))) {
 
-        if (state != null && state.equals("suppr")) {
             String id = request.getParameter("id");
             System.out.println("suppr" + request.getParameter("id"));
 
@@ -32,7 +35,7 @@ public class GestEtu extends HttpServlet {
            etudiantService.supprEtudiant(etudiant);
 
         }
-        else if (state != null && state.equals("modif")) {
+        else if (state != null && state.equals("modif")&&(role.equals("admin") || role.equals("editor"))) {
 
             String prenom = request.getParameter("prenom");
             String nom = request.getParameter("nom");
@@ -57,7 +60,7 @@ public class GestEtu extends HttpServlet {
 
         }
 
-        else {
+        else if (role.equals("admin") || role.equals("editor")) {
             System.out.println("creation");
             String nom = request.getParameter("nom");
             String prenom = request.getParameter("prenom");
@@ -74,6 +77,9 @@ public class GestEtu extends HttpServlet {
             etudiantService.addEtudiant(etu);
             this.doProcess(request, response);
 
+        }
+        else {
+            response.sendRedirect(request.getContextPath()+"/main");
         }
     }
 

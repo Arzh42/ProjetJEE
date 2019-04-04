@@ -117,15 +117,12 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     @Override
     public Etudiant findById(String idIn) {
-        System.out.println("test0");
         Connection co = DBManager.getInstance().getConnection();
         List<Etudiant> list = new ArrayList<>();
-        System.out.println("test1");
 
         try {
             Statement statement = co.createStatement();
             ResultSet rs = statement.executeQuery("select * from etudiant where id="+idIn);
-            System.out.println("test2");
             BuildEtudiantFromReq(list, rs);
             if (list.size()>1) {
                 System.out.println("Erreur retour multiple sur un appel par id");
@@ -166,6 +163,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     @Override
     public void addEtudiant(Etudiant etu) {
+
         Connection co = DBManager.getInstance().getConnection();
         System.out.println(co);
         try {
@@ -245,8 +243,9 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     @Override
     public void modifEtudiant(Etudiant etuAmodif, Etudiant etuModifie) {
-            this.supprEtudiant(etuAmodif);
-            this.addEtudiant(etuModifie);
+
+       this.supprEtudiant(etuAmodif);
+       this.addEtudiant(etuModifie);
     }
 
     @Override

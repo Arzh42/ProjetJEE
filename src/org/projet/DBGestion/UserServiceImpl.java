@@ -4,6 +4,8 @@ import org.projet.Exception.UserDBException;
 import org.tutorial.DBManager;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
@@ -48,6 +50,29 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    @Override
+    public List<User> getUsers() {
+        Connection co = DBManager.getInstance().getConnection();
+        ArrayList<User> list = new ArrayList<>();
+        try {
+            PreparedStatement statement = co.prepareStatement("select users.name,roles.role from users JOIN roles ON users.name=roles.name");
+            ResultSet rs = statement.executeQuery();
+            this.BuildUserFromReq(list,rs);
+            DBManager.getInstance().cleanup(co,statement,rs);
+            return list;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    private void BuildUserFromReq(List<User> list, ResultSet rs) throws SQLException {
+        while(rs.next()) {
+            String name = rs.getString("name");
+            String role = rs.getString("role");
+            User u = new User(name,role);
+            list.add(u);
+        }
+    }
     @Override
     public void changePassword(String name, String password) {
         Connection co = DBManager.getInstance().getConnection();
@@ -121,5 +146,19 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         }
         return false;
+    }
+
+    @Override
+    public void changeRole(String name, String role) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("UPDATE roles SET role=? WHERE name=?");
+            statement.setString(1,role);
+            statement.setString(2,name);
+            int status = statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
