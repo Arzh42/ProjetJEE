@@ -1,5 +1,5 @@
 window.onload = function(){
-    let id;
+    var id;
   $('li').on('click',function() {
       id = $(this).attr("id");
       loadEtuPage(id);

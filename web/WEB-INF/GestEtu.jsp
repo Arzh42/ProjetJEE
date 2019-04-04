@@ -32,7 +32,7 @@
       }
     %>
   </ul>
-
+    <br>
     <div id="etu_data"></div>
     <div id="action">
       <button id="create_etu">Créer un nouvel étudiant</button>
