@@ -26,13 +26,15 @@ window.onload = function() {
             console.log(result);
         });
     });
-    $('#creerGroupe').on('click',function() {
-        $("#createGroupeForm").css('display','');
+    $('#create_grp').on('click',function() {
+        console.log("test");
         $('.formGroupe').css('display','none');
+        $("#formCreation").css('display','');
     });
-    $('#modifierGroupe').on('click',function() {
-        $("#modifyGroupeForm").css('display','');
+    $('#modif_grp').on('click',function() {
+
         $('.formGroupe').css('display','none');
+        $("#formModif").css('display','');
     });
     $('#openAddStudent').on('click',function() {
         if ($('#liste_etu_for_add').css('display')==='') {

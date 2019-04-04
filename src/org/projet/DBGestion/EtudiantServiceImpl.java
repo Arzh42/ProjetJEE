@@ -24,6 +24,25 @@ public class EtudiantServiceImpl implements EtudiantService{
     }
 
     @Override
+    public List<Groupe> getAllGroupes() {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        return etuDAO.findGByAll();
+    }
+
+
+    @Override
+    public Groupe getGroupeByNom(String nom) {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        System.out.println(etuDAO.toString());
+        return etuDAO.findGByNom(nom);
+    }
+
+    @Override
+    public void addGroupe(Groupe g) {
+        EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        etuDAO.addGroupe(g);
+    }
+    @Override
     public void supprEtudiant(Etudiant etu) {
         EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
         etudiantDAO.supprEtudiant(etu);
@@ -35,4 +54,15 @@ public class EtudiantServiceImpl implements EtudiantService{
         etudiantDAO.modifEtudiant( etuAmodif, etudiantModifie);
     }
 
+    @Override
+    public void supprGroupe(Groupe g) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.supprGroupe(g);
+    }
+
+    @Override
+    public void modifGroupe(Groupe gAmodif, Groupe gModifie) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.modifGroupe( gAmodif, gModifie);
+    }
 }
