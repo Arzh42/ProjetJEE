@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="org.projet.DBGestion.User" %><%--
   Created by IntelliJ IDEA.
   User: Hugo
   Date: 25/03/2019
@@ -7,7 +9,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String role = (String) request.getAttribute("role");
+    List<User> list = (List<User>) request.getAttribute("users");
+
 %>
 <html>
 <head>
@@ -15,9 +18,6 @@
 </head>
 <body>
     <h1>Administration du compte</h1>
-<%
-    if (role.equals("user")) {
-        %>
         <h2>Changez mot de passe</h2>
     <form method="post" action="changePassword">
         <label for="password1">Votre ancien mot de passe : </label>
@@ -37,7 +37,17 @@
     </form>
 
     <%
+        if (list!=null) {
+        for (int i=0;i<list.size();i++) {
+    %>
+    <ul>
+        <li><%=list.get(i).getName()%> : <%=list.get(i).getRole()%> <form method="post" action="./GestionCompte"><input type="hidden" name="name" value="<%=list.get(i).getName()%>"/><input type="text" name="role" placeholder="Nouveau role"/><input type="submit"/></form></li>
+    </ul>
+<%
+    }
     }
 %>
+
+
 </body>
 </html>

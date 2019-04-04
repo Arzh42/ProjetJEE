@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -21,7 +22,10 @@ public class GestGroupe extends HttpServlet {
 
         String state = request.getParameter("state");
 
-        if (state != null && state.equals("suppr")) {
+        HttpSession session = request.getSession();
+        String role = (String) session.getAttribute("role");
+
+        if (state != null && state.equals("suppr")&&role.equals("admin") || role.equals("editor")) {
             String nom = request.getParameter("nom");
             System.out.println("suppr" + request.getParameter("nom"));
 
@@ -31,7 +35,7 @@ public class GestGroupe extends HttpServlet {
             this.doProcess(request, response);
 
         }
-        else if (state != null && state.equals("modif")) {
+        else if (state != null && state.equals("modif")&&(role.equals("admin") || role.equals("editor"))) {
 
             String ancienNom = request.getParameter("ancienNom");
             String nouveauNom = request.getParameter("nouveauNom");
