@@ -6,3 +6,5 @@ out/
 \.idea/workspace\.xml
 
 \.idea/misc\.xml
+
+web/META-INF/context\.xml
