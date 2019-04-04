@@ -1,3 +1,10 @@
+body {
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+}
 header {
     width:100%;
     text-align:center;
@@ -6,21 +13,23 @@ h1 {
     text-align: center;
 }
 #listeEtu {
-    position:absolute;
+    display: block;
     top:100px;
-    bottom:0;
+    height: 600px   ;
     width:150px;
+    float: left;
+    overflow: auto;
 }
-section {
-    position: absolute;
-    top:100px;
-    left:200px;
-    right:0;
-    bottom:0;
+.etudiantInListe{
+    cursor:pointer;
 }
 #etu_data{
     height:200px;
 }
 li {
   margin-bottom: 50px;
+}
+
+#action{
+    float: right;
 }

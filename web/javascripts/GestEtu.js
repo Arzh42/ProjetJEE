@@ -1,11 +1,31 @@
 window.onload = function(){
+    var id;
   $('li').on('click',function() {
-      let id = $(this).attr("id");
-      console.log(id);
+      id = $(this).attr("id");
       loadEtuPage(id);
   });
 
   function loadEtuPage(id) {
-      $('#etu_data').load("etu_data?id="+id);
+      console.log(id);
+      $('#etu_data').load("etu_data?id="+"etu"+id);
   }
+
+  $("#create_etu").click(function(){
+      $("#formModif").hide();
+      $("#formCreation").show();
+  });
+
+  $("#suppr_etu").click(function() {
+      $.post("GestEtu", { state : "suppr", id : id }, function(data, status){
+          window.open("GestEtu","_self");
+          //location.reload(true);
+      });
+  })
+
+    $("#modif_etu").click(function(){
+        $("#formCreation").hide();
+        $('#formModif').show();
+        document.getElementById("idcache").value = id;
+    });
 };
+
