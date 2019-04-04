@@ -36,6 +36,7 @@
         <button id="modif_grp">Modifier un groupe</button>
         <button id="suppr_grp">Supprimer un groupe</button>
         <button id="ajoutEtuGr">Ajouter un etudiant</button>
+        <button id="supprEtuGr">Supprimer un etudiant</button>
     </div>
 
 <div id="formCreation" class="formGroup" style="display: none">
@@ -49,6 +50,7 @@
         <br>
         Date de création:<br>
         <input type="text" id="date_creation" name="date_creation" value="">
+        <input type="text" name="state" value="creation" style="display: none">
 
         <br><br>
         <input type="submit" id="submit" value="Submit">
@@ -91,6 +93,18 @@
         <input type="submit" id="submitAjoutEtu" value="Submit Ajout">
     </form>
 </div>
-
+<div id="formSupprEtu" class="formGroup" style="display: none">
+    <form method="post" action="GestGroupe">
+        <br>
+        Nom du Groupe:<br>
+        <input type="text" id="nomGrSuppr" name="nomGrSuppr" value="">
+        <br>
+        Id de l'étudiant:<br>
+        <input type="text" id="idEtuSuppr" name="idEtuSuppr" value="">
+        <input type="text" name="state" value="SupprEtu" style="display: none">
+        <br><br>
+        <input type="submit" id="submitSupprEtu" value="Submit Suppr">
+    </form>
+</div>
 </body>
 </html>

@@ -7,22 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a46beb27-1009-4877-b621-15d6b781a447" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/Groupe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b8226437-9194-4830-8a47-96b11b6059bc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/DBGestion/WebServiceLink/URLToBDD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/Servlet/ConnectionServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/projet/Servlet/GestGroupe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/Servlet/GestGroupe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/tutorial/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/tutorial/MainServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/GestGroupe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/GestGroupe.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/javascripts/GestGroupe.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/javascripts/GestGroupe.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -71,6 +58,13 @@
         <item name="JEE1@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="JEE1: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="etudiant: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JEE1@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JEE1: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="groupe: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
@@ -96,22 +90,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/org/projet/Ajax/Etu_data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="264" column="83" selection-start-line="264" selection-start-column="83" selection-end-line="264" selection-end-column="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/GestGroupe.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="55" column="54" lean-forward="true" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+            <state relative-caret-position="155">
+              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,10 +102,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://2cd53126-db41-4ec6-8020-c36ea4171bca/schema/JEE1/table/etjoingrp">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/etu_data.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -156,6 +138,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="tglauss &lt;tglauss@enssat.fr&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -179,7 +166,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/GestionAdministration.jsp" />
         <option value="$PROJECT_DIR$/src/org/projet/Servlet/changePassServlet.java" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/UserService.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/org/projet/Servlet/changeQuestionServlet.java" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/UserServiceImpl.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aee459f1-35fc-4a20-b32f-f67f723cc22c/console.sql" />
@@ -203,14 +189,15 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/main.jsp" />
         <option value="$PROJECT_DIR$/web/javascripts/GestEtu.js" />
         <option value="$PROJECT_DIR$/web/WEB-INF/GestEtu.jsp" />
-        <option value="$PROJECT_DIR$/web/META-INF/context.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2cd53126-db41-4ec6-8020-c36ea4171bca/console.sql" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantService.java" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAO.java" />
+        <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" />
+        <option value="$PROJECT_DIR$/web/META-INF/context.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/GestGroupe.jsp" />
         <option value="$PROJECT_DIR$/web/javascripts/GestGroupe.js" />
-        <option value="$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/org/projet/Servlet/GestGroupe.java" />
       </list>
     </option>
@@ -357,7 +344,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554418112667" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554419944075" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.12-bin.jar!/" />
@@ -547,10 +534,18 @@
       <workItem from="1554100104442" duration="9998000" />
       <workItem from="1554301141000" duration="1670000" />
     </task>
+    <task id="LOCAL-00001" summary="ajouter un etuet et modif/suppr d'un grp">
+      <created>1554418204857</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554418204857</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101682000" />
+    <option name="totallyTimeSpent" value="103835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,7 +560,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.25686592" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.21728595" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -575,7 +570,7 @@
       <window_info id="Web" order="7" sideWeight="0.50151056" side_tool="true" weight="0.2185501" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.82310176" visible="true" weight="0.45479453" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.82310176" visible="true" weight="0.29863015" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -583,7 +578,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.33972603" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3260274" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.17689823" side_tool="true" visible="true" weight="0.45479453" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.17689823" side_tool="true" visible="true" weight="0.29863015" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49919224" weight="0.3260274" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -595,7 +590,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.15670437" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.14216478" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -680,26 +675,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit pour rien" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit pour rien" />
+    <MESSAGE value="ajouter un etuet et modif/suppr d'un grp" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajouter un etuet et modif/suppr d'un grp" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/tutorial/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/tutorial/MainServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -759,16 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/Ajax/Etu_data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/outputRead/output.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -780,13 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/etu_data.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -862,13 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="21" column="46" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -1015,20 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/tutorial/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/MainServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1071,24 +1012,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/GestEtu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1099,37 +1026,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/tutorial/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-903">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2cd53126-db41-4ec6-8020-c36ea4171bca/schema/JEE1/table/etudiant">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/javascripts/GestGroupe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/GestGroupe.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="264" column="83" selection-start-line="264" selection-start-column="83" selection-end-line="264" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="212">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/projet/Servlet/GestGroupe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="55" column="54" lean-forward="true" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+        <state relative-caret-position="308">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1140,6 +1075,61 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/Groupe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/DBGestion/EtudiantDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-556">
+          <caret line="264" column="83" selection-start-line="264" selection-start-column="83" selection-end-line="264" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/GestGroupe.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="59" lean-forward="true" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projet/Ajax/Etu_data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/etu_data.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
         </state>
       </provider>
     </entry>

@@ -27,6 +27,7 @@ window.onload = function() {
         $("#formModif").hide();
         $("#formSuppr").hide();
         $("#formAjoutEtu").hide();
+        $("#formSupprEtu").hide();
         $("#formCreation").show();
 
     });
@@ -34,6 +35,7 @@ window.onload = function() {
         $("#formSuppr").hide();
         $("#formCreation").hide();
         $("#formAjoutEtu").hide();
+        $("#formSupprEtu").hide();
         $("#formModif").show();
 
     });
@@ -51,6 +53,7 @@ window.onload = function() {
         $("#formCreation").hide();
         $("#formModif").hide();
         $("#formAjoutEtu").hide();
+        $("#formSupprEtu").hide();
         $("#formSuppr").show();
 
     })
@@ -59,7 +62,16 @@ window.onload = function() {
         $("#formCreation").hide();
         $("#formModif").hide();
         $("#formSuppr").hide();
+        $("#formSupprEtu").hide();
         $("#formAjoutEtu").show();
+    })
+
+    $("#supprEtuGr").click(function() {
+        $("#formCreation").hide();
+        $("#formModif").hide();
+        $("#formSuppr").hide();
+        $("#formAjoutEtu").hide();
+        $("#formSupprEtu").show();
     })
 
 };

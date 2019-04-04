@@ -46,7 +46,7 @@ public class GestGroupe extends HttpServlet {
 
             etudiantService.modifGroupe(gAchanger,gModif);
 
-            System.out.println("modif"+request.getParameter("nom"));
+            System.out.println("modif"+request.getParameter("ancienNom"));
             this.doProcess(request, response);
 
 
@@ -62,7 +62,7 @@ public class GestGroupe extends HttpServlet {
             this.doProcess(request, response);
         }
 
-        else {
+        else if(state != null && state.equals("creation")){
             System.out.println("creation");
             String nom = request.getParameter("nom");
             String nomProprietaire = request.getParameter("nom_proprietaire");
@@ -76,6 +76,19 @@ public class GestGroupe extends HttpServlet {
             etudiantService.addGroupe(g);
             this.doProcess(request, response);
 
+        }
+        else if(state != null && state.equals("SupprEtu")){
+            String nomGr = request.getParameter("nomGrSuppr");
+            String id = request.getParameter("idEtuSuppr");
+            Groupe g = etudiantService.getGroupeByNom(nomGr);
+            Etudiant etu = etudiantService.getEtudiantsById(id);
+
+            etudiantService.supprEtuGroupe(g,etu);
+            this.doProcess(request, response);
+
+        }
+        else {
+            this.doProcess(request, response);
         }
     }
 
