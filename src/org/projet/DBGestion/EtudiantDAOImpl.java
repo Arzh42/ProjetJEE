@@ -139,6 +139,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
     @Override
     public void addEtudiant(Etudiant etu) {
         Connection co = DBManager.getInstance().getConnection();
+        System.out.println(co);
         try {
             PreparedStatement statement = co.prepareStatement("INSERT INTO etudiant(nom,prenom,date_de_naissance,courrielPerso,courrielPro,serieBac,dateBac,mentionBac,diplome,dateDiplome) VALUES (?,?,?,?,?,?,?,?,?,?)");
             statement.setString(1,etu.getNom());
