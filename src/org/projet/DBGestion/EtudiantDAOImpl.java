@@ -140,15 +140,18 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     @Override
     public Groupe findGByNom(String nomG) {
+        System.out.println("test0");
         Connection co = DBManager.getInstance().getConnection();
         List<Groupe> list = new ArrayList<>();
+        System.out.println("Nom G"+nomG);
 
         try {
             Statement statement = co.createStatement();
-            ResultSet rs = statement.executeQuery("select * from etudiant where nom="+nomG);
+            nomG= "'"+nomG+"'";
+            ResultSet rs = statement.executeQuery("select * from groupe where nom="+nomG);
             BuildGroupeFromReq(list, rs);
             if (list.size()>1) {
-                System.out.println("Erreur retour multiple sur un appel par nom");
+                System.out.println("Erreur retour multiple sur un appel par id");
                 return null;
             }
             else {
@@ -254,6 +257,37 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         this.addGroupe(gModifie);
     }
 
+    @Override
+    public void ajoutEtuGroupe(Groupe g, Etudiant etu) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("INSERT INTO etjoingrp(idEt,nameGrp,statut) VALUES (?,?,?)");
+            statement.setString(1,etu.getId());
+            statement.setString(2,g.getNom());
+            statement.setString(3,"in");
+            int status = statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void supprEtuGroupe(Groupe g, Etudiant etu) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("DELETE FROM etjoingrp WHERE idEt=? AND nameGrp=?");
+            statement.setString(1,etu.getId());
+            statement.setString(2,g.getNom());
+
+            int status = statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     private void BuildEtudiantFromReq(List<Etudiant> list, ResultSet rs) throws SQLException {
         while(rs.next()) {
             String id = rs.getString("id");
@@ -277,6 +311,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             String nom = rs.getString("nom");
             String nomProprietaire = rs.getString("nom_proprietaire");
             String dateCreation = rs.getString("date_creation");
+            System.out.println(nom + nomProprietaire+dateCreation);
             Groupe g = new Groupe(nom,nomProprietaire,dateCreation);
             list.add(g);
         }

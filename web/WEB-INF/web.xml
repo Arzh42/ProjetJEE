@@ -49,22 +49,7 @@
         <servlet-name>changeQuestion</servlet-name>
         <url-pattern>/user/changeQuestion</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>forgetPassword</servlet-name>
-        <servlet-class>org.projet.Servlet.forgetPassword</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>forgetPassword</servlet-name>
-        <url-pattern>/forgetPassword</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>getQuestion</servlet-name>
-        <servlet-class>org.projet.Servlet.getQuestionServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>getQuestion</servlet-name>
-        <url-pattern>/getQuestion</url-pattern>
-    </servlet-mapping>
+
     <servlet>
         <servlet-name>ConnectionServlet</servlet-name>
         <servlet-class>org.projet.Servlet.ConnectionServlet</servlet-class>

@@ -35,6 +35,7 @@
         <button id="create_grp">Créer un nouveau groupe</button>
         <button id="modif_grp">Modifier un groupe</button>
         <button id="suppr_grp">Supprimer un groupe</button>
+        <button id="ajoutEtuGr">Ajouter un etudiant</button>
     </div>
 
 <div id="formCreation" class="formGroup" style="display: none">
@@ -45,7 +46,7 @@
         <br>
         Nom du propriétaire:<br>
         <input type="text" id="nom_proprietaire" name="nom_proprietaire" value="">
-
+        <br>
         Date de création:<br>
         <input type="text" id="date_creation" name="date_creation" value="">
 
@@ -57,16 +58,37 @@
 <div id="formModif" class="formGroup" style="display: none">
     <form method="post" action="GestGroupe">
         <br>
-        Nom:<br>
-        <input type="text" id="nomModif" name="nom" value="">
+        Ancien Nom:<br>
+        <input type="text" id="ancienNomModif" name="ancienNom" value="">
         <br>
-        Nom du propriétaire:<br>
-        <input type="text" id="nom_proprietaireModif" name="nom_proprietaire" value="">
-        <br>
-        Date de création:<br>
-        <input type="text" id="date_creationModif" name="date_creation" value="">
+        Nouveau Nom:<br>
+        <input type="text" id="nouveauNomModif" name="nouveauNom" value="">
+        <input type="text" style="display: none" name="state" value="modif">
         <br><br>
         <input type="submit" id="submitModif" value="Submit Modif">
+    </form>
+</div>
+<div id="formSuppr" class="formGroup" style="display: none">
+    <form method="post" action="GestGroupe">
+        <br>
+        Nom:<br>
+        <input type="text" id="nomSuppr" name="nom" value="">
+        <input type="text" name="state" value="suppr" style="display: none">
+        <br><br>
+        <input type="submit" id="submitSuppr" value="Submit Suppr">
+    </form>
+</div>
+<div id="formAjoutEtu" class="formGroup" style="display: none">
+    <form method="post" action="GestGroupe">
+        <br>
+        Nom du Groupe:<br>
+        <input type="text" id="nomGrAjout" name="nomGr" value="">
+        <br>
+        Id de l'étudiant:<br>
+        <input type="text" id="idEtu" name="idEtu" value="">
+        <input type="text" name="state" value="AjoutEtu" style="display: none">
+        <br><br>
+        <input type="submit" id="submitAjoutEtu" value="Submit Ajout">
     </form>
 </div>
 

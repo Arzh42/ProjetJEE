@@ -1,5 +1,6 @@
 package org.projet.Servlet;
 
+import org.projet.DBGestion.Etudiant;
 import org.projet.DBGestion.Groupe;
 import org.projet.DBGestion.EtudiantService;
 import org.projet.DBGestion.EtudiantServiceImpl;
@@ -29,22 +30,22 @@ public class GestGroupe extends HttpServlet {
             System.out.println("suppr" + request.getParameter("nom"));
 
             Groupe g = etudiantService.getGroupeByNom(nom);
-
+            System.out.println("coucouuuuuuuuuuuuuu" + g);
             etudiantService.supprGroupe(g);
+            this.doProcess(request, response);
 
         }
         else if (state != null && state.equals("modif")&&(role.equals("admin") || role.equals("editor"))) {
 
-            String nom = request.getParameter("nom");
-            String nomProprietaire = request.getParameter("nom_proprietaire");
-            String dateCreation = request.getParameter("date_creation");
+            String ancienNom = request.getParameter("ancienNom");
+            String nouveauNom = request.getParameter("nouveauNom");
 
             Groupe gAchanger, gModif;
 
-            gAchanger = etudiantService.getGroupeByNom(nom);
+            gAchanger = etudiantService.getGroupeByNom(ancienNom);
 
             gModif = new Groupe(
-                    nom, nomProprietaire, dateCreation
+                    nouveauNom, gAchanger.getNomProprietaire(), gAchanger.getDateCreation()
             );
 
             etudiantService.modifGroupe(gAchanger,gModif);
@@ -53,6 +54,16 @@ public class GestGroupe extends HttpServlet {
             this.doProcess(request, response);
 
 
+        }
+        else if (state != null & state.equals("AjoutEtu")){
+            String nomGr = request.getParameter("nomGr");
+            String id = request.getParameter("idEtu");
+
+            Groupe g = etudiantService.getGroupeByNom(nomGr);
+            Etudiant etu = etudiantService.getEtudiantsById(id);
+            etudiantService.ajoutEtuGroupe(g, etu);
+
+            this.doProcess(request, response);
         }
 
         else if (role.equals("admin") || role.equals("editor")) {

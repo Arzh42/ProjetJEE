@@ -22,4 +22,8 @@ public interface EtudiantService {
     void supprGroupe(Groupe g);
 
     void modifGroupe(Groupe gAmodif, Groupe groupeModifie);
+
+    void ajoutEtuGroupe(Groupe g, Etudiant etu);
+
+    void supprEtuGroupe(Groupe g, Etudiant etu);
 }

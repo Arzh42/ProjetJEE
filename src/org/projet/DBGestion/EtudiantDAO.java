@@ -22,4 +22,8 @@ public interface EtudiantDAO {
     void supprGroupe(Groupe g);
 
     void modifGroupe(Groupe gAmodif, Groupe gModifie);
+
+    void ajoutEtuGroupe(Groupe g, Etudiant etu);
+
+    void supprEtuGroupe(Groupe g, Etudiant etu);
 }
