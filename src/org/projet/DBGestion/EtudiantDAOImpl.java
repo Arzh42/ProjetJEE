@@ -31,15 +31,12 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     public static void saveDatasInDB(InputStream fis){
 
-            System.out.println("<<<ENTREEE saveDatas >>>>>>>>");
-            System.out.println("<<< Juste avant JSON >>>>>>>>");
+
             JsonReader reader = Json.createReader(fis);
 
             JsonArray jsonArray = reader.readArray();
 
             reader.close();
-
-            System.out.println("<<<on a lu le fichier >>>>>>>>");
 
             Etudiant etuTempo;
 
@@ -59,9 +56,7 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             EtudiantServiceImpl etudiantDAO = new EtudiantServiceImpl();
 
 
-            for (int i = 0; i < 3&&i< jsonArray.size(); i++) {
-                //etuTempo = new Etudiant()
-                System.out.println("<<<entrée Boucle >>>>>>>>");
+            for (int i = 0; i < 10&&i< jsonArray.size(); i++) {
                 tempo = (JsonObject) jsonArray.get(i);
                 id = tempo.getString("numetudiant");
                 prenom = tempo.getString("prenom");
@@ -74,21 +69,13 @@ public class EtudiantDAOImpl implements EtudiantDAO {
                 diplome = tempo.getString("diplome");
                 dateDiplome = tempo.getString("anDiplome");
 
-                //date_de_naissance = java.text.DateFormat.getDateInstance().parse(tempo.getString("ddn"));
                 date_de_naissance = tempo.getString("ddn");
-                System.out.println("<<<avant etudiant>>>>>>>>");
-                etuTempo = new Etudiant(id, nom, prenom, date_de_naissance, courrielPerso, courrielPro, serieBac, dateBac, mentionBac, diplome, dateDiplome);
+
+                etuTempo = new Etudiant(id, nom, prenom, date_de_naissance, courrielPro, courrielPerso, serieBac, dateBac, mentionBac, diplome, dateDiplome);
                 etudiantDAO.addEtudiant(etuTempo);
-                System.out.println(etuTempo.toString());
-                System.out.println("-----------------<<<<<<<<>>>>>>--------------------");
+
             }
-            //System.out.println(jsonArray);
 
-            // DB connection setup
-            //Connection con = DBManager.getInstance().getConnection();
-
-            // PreparedStatements
-            //PreparedStatement preparedStatement = con.prepareStatement("insert into  Table_Name values (?, ?, ?, ? )");
 
         }
 
