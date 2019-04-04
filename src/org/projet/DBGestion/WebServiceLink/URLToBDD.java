@@ -8,7 +8,7 @@ import java.net.URL;
 import java.nio.file.FileSystem;
 import java.nio.file.Path;
 
-public class URLToFile {
+public class URLToBDD {
 
 
         public static void process(String url){
