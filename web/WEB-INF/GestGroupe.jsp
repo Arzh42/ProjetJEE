@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="org.projet.DBGestion.Etudiant" %>
+<%@ page import="org.projet.DBGestion.Groupe" %>
 <%@ page import="java.util.List" %>
 <%
-    List<Etudiant> listEtudiants = (List<Etudiant>)request.getAttribute("listEtudiants");
+    List<Groupe> listGroupes = (List<Groupe>)request.getAttribute("listGroupes");
 %>
 <html>
 <head>
@@ -20,65 +20,77 @@
         <a href="GestGroupe">Gestion Groupe</a>
     </nav>
 </header>
-<section id="groupeNavigation">
-    <ul>
-        <li class="groupeChoice" id="groupe1">Groupe 1</li>
-    </ul>
-    <button id="creerGroupe">Créer un nouveau groupe</button>
-</section>
-<section id="AffGroupe" class="formGroupe">
-    <h2>Nom du groupe</h2>
-    <h3>Nom du propriétaire</h3>
-    <span class="groupe_creation_date">15/05>2018</span>
-    <button id="supprGroupe">Supprimer le groupe</button>
-    <div id="liste_etu">
-        <input type="checkbox" id="etu_id" name="etu_id" />
-        <label for="etu_id">Etudiant 1</label>
-        <input type="checkbox" id="etu_id2" name="etu_id2"  />
-        <label for="etu_id2">Etudiant 2</label>
-        <button id="exclude">Exclude from the group</button>
+<ul id="listeEtu">
+    <%
+        for (Groupe g : listGroupes) {
+            String nom = g.getNom();
+            String dateCreation = g.getDateCreation();
+    %>
+    <li id="gr<%=nom%>">Groupe <%=nom%>,créé le  <%=dateCreation%></li>
+    <%
+        }
+    %>
+</ul>
+    <div id="action">
+        <button id="create_grp">Créer un nouveau groupe</button>
+        <button id="modif_grp">Modifier un groupe</button>
+        <button id="suppr_grp">Supprimer un groupe</button>
+        <button id="ajoutEtuGr">Ajouter un etudiant</button>
     </div>
-    <div id="liste_groupe">
-        <input type="checkbox" id="groupe_id" name="groupe1" />
-        <label for="etu_id">Etudiant 1</label>
-        <input type="checkbox" id="groupe_id2" name="groupe2"  />
-        <label for="etu_id2">Etudiant 2</label>
-        <button id="exclude_groupe">Exclude from the group</button>
 
-    </div>
-    <button id="openAddStudent">Add Student</button>
-    <div style="display:none" id="liste_etu_for_add">
-        <input type="checkbox" id="add_etu_id" name="etu_id" />
-        <label for="add_etu_id">Etudiant 1</label>
-        <input type="checkbox" id="add_etu_id2" name="etu_id2"  />
-        <label for="add_etu_id2">Etudiant 2</label>
-        <button id="addEtu">Add the etu in the group</button>
-    </div>
-    <button id="openAddGroupe">Add Groupe</button>
-    <div style="display:none; id="liste_groupe_for_add">
-        <input type="checkbox" id="add_groupe_id" name="etu_id" />
-        <label for="add_groupe_id">Etudiant 1</label>
-        <input type="checkbox" id="add_groupe_id2" name="etu_id2"  />
-        <label for="add_groupe_id2">Etudiant 2</label>
-        <button id="addGroupe">Add the etu in the group</button>
-    </div>
-</section>
-<section id="modifyGroupeForm" class="formGroupe">
-    <form method="post" action="modifyGroupe">
-        <h2><input type="text" name="group_name" value="Nom du groupe" /></h2>
-        <h3>Nom du propriétaire</h3>
-        <input class="groupe_creation_date" type="text" name="creation_date" value="15/05>2018">
-        <button id="sendModifyGroupe">Modify</button>
+<div id="formCreation" class="formGroup" style="display: none">
+    <form method="post" action="GestGroupe" >
+        <br>
+        Nom:<br>
+        <input type="text" id="nom" name="nom" value="">
+        <br>
+        Nom du propriétaire:<br>
+        <input type="text" id="nom_proprietaire" name="nom_proprietaire" value="">
+        <br>
+        Date de création:<br>
+        <input type="text" id="date_creation" name="date_creation" value="">
+
+        <br><br>
+        <input type="submit" id="submit" value="Submit">
     </form>
+</div>
 
-</section>
-
-<section id="createGroupeForm" class="formGroupe">
-    <form method="post" action="createGroupe">
-        <input type="text" name="group_name" placeholder="Nom du groupe"/>
-        <input class="groupe_creation_date" type="text" name="creation_date" placeholder="15/03/1997">
-        <button id="sendCreateGroupe">Create</button>
+<div id="formModif" class="formGroup" style="display: none">
+    <form method="post" action="GestGroupe">
+        <br>
+        Ancien Nom:<br>
+        <input type="text" id="ancienNomModif" name="ancienNom" value="">
+        <br>
+        Nouveau Nom:<br>
+        <input type="text" id="nouveauNomModif" name="nouveauNom" value="">
+        <input type="text" style="display: none" name="state" value="modif">
+        <br><br>
+        <input type="submit" id="submitModif" value="Submit Modif">
     </form>
-</section>
+</div>
+<div id="formSuppr" class="formGroup" style="display: none">
+    <form method="post" action="GestGroupe">
+        <br>
+        Nom:<br>
+        <input type="text" id="nomSuppr" name="nom" value="">
+        <input type="text" name="state" value="suppr" style="display: none">
+        <br><br>
+        <input type="submit" id="submitSuppr" value="Submit Suppr">
+    </form>
+</div>
+<div id="formAjoutEtu" class="formGroup" style="display: none">
+    <form method="post" action="GestGroupe">
+        <br>
+        Nom du Groupe:<br>
+        <input type="text" id="nomGrAjout" name="nomGr" value="">
+        <br>
+        Id de l'étudiant:<br>
+        <input type="text" id="idEtu" name="idEtu" value="">
+        <input type="text" name="state" value="AjoutEtu" style="display: none">
+        <br><br>
+        <input type="submit" id="submitAjoutEtu" value="Submit Ajout">
+    </form>
+</div>
+
 </body>
 </html>

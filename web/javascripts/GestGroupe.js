@@ -1,9 +1,9 @@
 window.onload = function() {
-    let selectedGroupe;
+    var selectedGroupe;
     $('#exclude').on('click',function(e) {
         console.log("test");
         e.preventDefault();
-        let chkArray = [];
+        var chkArray = [];
         $("#liste_etu input:checked").each(function() {
             chkArray.push($(this).attr('name'));
         });
@@ -13,7 +13,7 @@ window.onload = function() {
     });
     $('#exclude_groupe').on('click',function(e) {
         e.preventDefault();
-        let chkArray = [];
+        var chkArray = [];
         $("#liste_groupe input:checked").each(function() {
             chkArray.push($(this).attr('name'));
         });
@@ -21,18 +21,21 @@ window.onload = function() {
             console.log(result);
         });
     });
-    $("#supprGroupe").on('click',function() {
-        $.post('/User/SupprGroupe',{idGroupe:selectedGroupe},function(result) {
-            console.log(result);
-        });
+
+    $('#create_grp').on('click',function() {
+        console.log("test");
+        $("#formModif").hide();
+        $("#formSuppr").hide();
+        $("#formAjoutEtu").hide();
+        $("#formCreation").show();
+
     });
-    $('#creerGroupe').on('click',function() {
-        $("#createGroupeForm").css('display','');
-        $('.formGroupe').css('display','none');
-    });
-    $('#modifierGroupe').on('click',function() {
-        $("#modifyGroupeForm").css('display','');
-        $('.formGroupe').css('display','none');
+    $('#modif_grp').on('click',function() {
+        $("#formSuppr").hide();
+        $("#formCreation").hide();
+        $("#formAjoutEtu").hide();
+        $("#formModif").show();
+
     });
     $('#openAddStudent').on('click',function() {
         if ($('#liste_etu_for_add').css('display')==='') {
@@ -43,5 +46,20 @@ window.onload = function() {
 
         }
     });
+
+    $("#suppr_grp").click(function() {
+        $("#formCreation").hide();
+        $("#formModif").hide();
+        $("#formAjoutEtu").hide();
+        $("#formSuppr").show();
+
+    })
+
+    $("#ajoutEtuGr").click(function() {
+        $("#formCreation").hide();
+        $("#formModif").hide();
+        $("#formSuppr").hide();
+        $("#formAjoutEtu").show();
+    })
 
 };

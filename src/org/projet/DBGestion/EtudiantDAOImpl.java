@@ -31,15 +31,12 @@ public class EtudiantDAOImpl implements EtudiantDAO {
 
     public static void saveDatasInDB(InputStream fis){
 
-            System.out.println("<<<ENTREEE saveDatas >>>>>>>>");
-            System.out.println("<<< Juste avant JSON >>>>>>>>");
+
             JsonReader reader = Json.createReader(fis);
 
             JsonArray jsonArray = reader.readArray();
 
             reader.close();
-
-            System.out.println("<<<on a lu le fichier >>>>>>>>");
 
             Etudiant etuTempo;
 
@@ -59,36 +56,26 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             EtudiantServiceImpl etudiantDAO = new EtudiantServiceImpl();
 
 
-            for (int i = 0; i < 3&&i< jsonArray.size(); i++) {
-                //etuTempo = new Etudiant()
-                System.out.println("<<<entrée Boucle >>>>>>>>");
+            for (int i = 0; i < 10&&i< jsonArray.size(); i++) {
                 tempo = (JsonObject) jsonArray.get(i);
                 id = tempo.getString("numetudiant");
                 prenom = tempo.getString("prenom");
                 nom = tempo.getString("nom");
-                courrielPro = tempo.getString("emailPro");
                 courrielPerso = tempo.getString("emailPerso");
+                courrielPro = tempo.getString("emailPro");
                 serieBac = tempo.getString("bac");
                 mentionBac = tempo.getString("menBac");
                 dateBac = tempo.getString("anBac");
                 diplome = tempo.getString("diplome");
                 dateDiplome = tempo.getString("anDiplome");
 
-                //date_de_naissance = java.text.DateFormat.getDateInstance().parse(tempo.getString("ddn"));
                 date_de_naissance = tempo.getString("ddn");
-                System.out.println("<<<avant etudiant>>>>>>>>");
+
                 etuTempo = new Etudiant(id, nom, prenom, date_de_naissance, courrielPro, courrielPerso, serieBac, dateBac, mentionBac, diplome, dateDiplome);
                 etudiantDAO.addEtudiant(etuTempo);
-                System.out.println(etuTempo.toString());
-                System.out.println("-----------------<<<<<<<<>>>>>>--------------------");
+
             }
-            //System.out.println(jsonArray);
 
-            // DB connection setup
-            //Connection con = DBManager.getInstance().getConnection();
-
-            // PreparedStatements
-            //PreparedStatement preparedStatement = con.prepareStatement("insert into  Table_Name values (?, ?, ?, ? )");
 
         }
 
@@ -111,6 +98,24 @@ public class EtudiantDAOImpl implements EtudiantDAO {
     }
 
     @Override
+    public List<Groupe> findGByAll() {
+        Connection co = DBManager.getInstance().getConnection();
+        List<Groupe> list = new ArrayList<>();
+
+        try {
+            Statement statement = co.createStatement();
+            System.out.println("<<<<<méthode findGByAll >>>>>>");
+            ResultSet rs = statement.executeQuery("select * from groupe");
+            BuildGroupeFromReq(list, rs);
+            System.out.println(list);
+            DBManager.getInstance().cleanup(co,statement,rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    @Override
     public Etudiant findById(String idIn) {
         System.out.println("test0");
         Connection co = DBManager.getInstance().getConnection();
@@ -122,6 +127,32 @@ public class EtudiantDAOImpl implements EtudiantDAO {
             ResultSet rs = statement.executeQuery("select * from etudiant where id="+idIn);
             System.out.println("test2");
             BuildEtudiantFromReq(list, rs);
+            if (list.size()>1) {
+                System.out.println("Erreur retour multiple sur un appel par id");
+                return null;
+            }
+            else {
+                DBManager.getInstance().cleanup(co,statement,rs);
+                return list.get(0);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public Groupe findGByNom(String nomG) {
+        System.out.println("test0");
+        Connection co = DBManager.getInstance().getConnection();
+        List<Groupe> list = new ArrayList<>();
+        System.out.println("Nom G"+nomG);
+
+        try {
+            Statement statement = co.createStatement();
+            nomG= "'"+nomG+"'";
+            ResultSet rs = statement.executeQuery("select * from groupe where nom="+nomG);
+            BuildGroupeFromReq(list, rs);
             if (list.size()>1) {
                 System.out.println("Erreur retour multiple sur un appel par id");
                 return null;
@@ -160,6 +191,22 @@ public class EtudiantDAOImpl implements EtudiantDAO {
     }
 
     @Override
+    public void addGroupe(Groupe g) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            Date d = new Date();
+            PreparedStatement statement = co.prepareStatement("INSERT INTO groupe(nom,nom_proprietaire,date_creation) VALUES (?,?,?)");
+            statement.setString(1,g.getNom());
+            statement.setString(2,g.getNomProprietaire());
+            statement.setString(3,g.getDateCreation());
+            int status = statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public void supprEtudiant(Etudiant etu) {
         Connection co = DBManager.getInstance().getConnection();
 
@@ -181,10 +228,66 @@ public class EtudiantDAOImpl implements EtudiantDAO {
     }
 
     @Override
+    public void supprGroupe(Groupe g) {
+        Connection co = DBManager.getInstance().getConnection();
+
+
+        try {
+
+            PreparedStatement statement = co.prepareStatement("DELETE FROM Groupe WHERE nom=?");
+            statement.setString(1, g.getNom());
+
+            statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
     public void modifEtudiant(Etudiant etuAmodif, Etudiant etuModifie) {
             this.supprEtudiant(etuAmodif);
             this.addEtudiant(etuModifie);
     }
+
+    @Override
+    public void modifGroupe(Groupe gAmodif, Groupe gModifie) {
+        this.supprGroupe(gAmodif);
+        this.addGroupe(gModifie);
+    }
+
+    @Override
+    public void ajoutEtuGroupe(Groupe g, Etudiant etu) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("INSERT INTO etjoingrp(idEt,nameGrp,statut) VALUES (?,?,?)");
+            statement.setString(1,etu.getId());
+            statement.setString(2,g.getNom());
+            statement.setString(3,"in");
+            int status = statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void supprEtuGroupe(Groupe g, Etudiant etu) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("DELETE FROM etjoingrp WHERE idEt=? AND nameGrp=?");
+            statement.setString(1,etu.getId());
+            statement.setString(2,g.getNom());
+
+            int status = statement.executeUpdate();
+            DBManager.getInstance().cleanup(co,statement,null);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private void BuildEtudiantFromReq(List<Etudiant> list, ResultSet rs) throws SQLException {
         while(rs.next()) {
@@ -204,6 +307,16 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         }
     }
 
+    private void BuildGroupeFromReq(List<Groupe> list, ResultSet rs) throws SQLException {
+        while(rs.next()) {
+            String nom = rs.getString("nom");
+            String nomProprietaire = rs.getString("nom_proprietaire");
+            String dateCreation = rs.getString("date_creation");
+            System.out.println(nom + nomProprietaire+dateCreation);
+            Groupe g = new Groupe(nom,nomProprietaire,dateCreation);
+            list.add(g);
+        }
+    }
 
     public static void test(){
         EtudiantService etudiantService = new EtudiantServiceImpl();
