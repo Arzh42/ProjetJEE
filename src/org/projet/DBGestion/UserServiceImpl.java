@@ -16,12 +16,14 @@ public class UserServiceImpl implements UserService {
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 if ( password.equals(rs.getString("password"))) {
+                    DBManager.getInstance().cleanup(co,statement,rs);
                     return true;
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return false;
     }
 
@@ -33,7 +35,9 @@ public class UserServiceImpl implements UserService {
             statement.setString(1,name);
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
-                return rs.getString("role");
+                String role = rs.getString("role");
+                DBManager.getInstance().cleanup(co,statement,rs);
+                return role;
             }
             else {
                 throw new UserDBException("Role Introuvable");
@@ -79,15 +83,43 @@ public class UserServiceImpl implements UserService {
     public String getQuestion(String name) {
         Connection co = DBManager.getInstance().getConnection();
         try {
+            System.out.println("name"+name);
             PreparedStatement statement = co.prepareStatement("select question from users where name=?");
             statement.setString(1,name);
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
-                return rs.getString("question");
+                String question = rs.getString("question");
+                DBManager.getInstance().cleanup(co,statement,rs);
+                return question;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public boolean verifyReponse(String name, String reponse) {
+        Connection co = DBManager.getInstance().getConnection();
+        try {
+            PreparedStatement statement = co.prepareStatement("select reponse from users where name=?");
+            statement.setString(1,name);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                if (rs.getString("reponse").equals(reponse)) {
+                    DBManager.getInstance().cleanup(co,statement,rs);
+
+                    return true;
+                }
+                else {
+                    DBManager.getInstance().cleanup(co,statement,rs);
+
+                    return false;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

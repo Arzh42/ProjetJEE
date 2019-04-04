@@ -10,4 +10,6 @@ public interface UserService {
     void changeQuestion(String name, String question, String reponse);
 
     String getQuestion(String name);
+
+    boolean verifyReponse(String name,String reponse);
 }
