@@ -13,6 +13,7 @@ public class EtudiantServiceImpl implements EtudiantService{
     @Override
     public Etudiant getEtudiantsById(String id) {
         EtudiantDAO etuDAO = new EtudiantDAOImpl();
+        System.out.println(etuDAO.toString());
         return etuDAO.findById(id);
     }
 
@@ -23,15 +24,15 @@ public class EtudiantServiceImpl implements EtudiantService{
     }
 
     @Override
-    public void updateEtudiantById(Etudiant etu, int id) {
-        EtudiantDAO etuDAO = new EtudiantDAOImpl();
-        etuDAO.updateEtudiantById(etu,id);
+    public void supprEtudiant(Etudiant etu) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.supprEtudiant(etu);
     }
 
     @Override
-    public void deleteEtudiantById(int id) {
-        EtudiantDAO etuDAO = new EtudiantDAOImpl();
-        etuDAO.deleteEtudiantById(id);
-
+    public void modifEtudiant(Etudiant etuAmodif, Etudiant etudiantModifie) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        etudiantDAO.modifEtudiant( etuAmodif, etudiantModifie);
     }
+
 }

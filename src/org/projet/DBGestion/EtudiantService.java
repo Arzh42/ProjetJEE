@@ -9,7 +9,7 @@ public interface EtudiantService {
 
     void addEtudiant(Etudiant etu);
 
-    void updateEtudiantById(Etudiant etu,int id);
+    void supprEtudiant(Etudiant etu);
 
-    void deleteEtudiantById(int id);
+    void modifEtudiant(Etudiant etuAmodif, Etudiant etudiantModifie);
 }

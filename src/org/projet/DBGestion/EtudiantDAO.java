@@ -9,7 +9,7 @@ public interface EtudiantDAO {
 
     void addEtudiant(Etudiant etu);
 
-    void updateEtudiantById(Etudiant etu,int id);
+    void supprEtudiant(Etudiant etu);
 
-    void deleteEtudiantById(int id);
+    void modifEtudiant(Etudiant etuAmodif, Etudiant etuModifie);
 }

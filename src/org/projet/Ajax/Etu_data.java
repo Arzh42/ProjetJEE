@@ -18,11 +18,14 @@ public class Etu_data extends HttpServlet {
 
 
         try {
+            System.out.println("Accès à un étudiant");
             String attrId = request.getParameter("id");
             String id = attrId.split("etu")[1];
+            System.out.println(etuService.toString());
             Etudiant etu = etuService.getEtudiantsById(id);
+            System.out.println(etu.toString());
+            System.out.println("tqsdfdqsojpqsdqsdopiojpqsdijfoiqpsdfiojqsiojdfoiqsdoij");
             request.setAttribute("Etudiant",etu);
-
             String pageName="/WEB-INF/etu_data.jsp";
             RequestDispatcher rd = getServletContext().getRequestDispatcher(pageName);
             try {
