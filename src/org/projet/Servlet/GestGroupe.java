@@ -25,7 +25,7 @@ public class GestGroupe extends HttpServlet {
         HttpSession session = request.getSession();
         String role = (String) session.getAttribute("role");
 
-        if (state != null && state.equals("suppr")&&role.equals("admin") || role.equals("editor")) {
+        if (state != null && state.equals("suppr")&&(role.equals("admin") || role.equals("editor"))) {
             String nom = request.getParameter("nom");
             System.out.println("suppr" + request.getParameter("nom"));
 
@@ -55,7 +55,7 @@ public class GestGroupe extends HttpServlet {
 
 
         }
-        else if (state != null & state.equals("AjoutEtu")){
+        else if (state != null && state.equals("AjoutEtu")&&(role.equals("admin") || role.equals("editor"))){
             String nomGr = request.getParameter("nomGr");
             String id = request.getParameter("idEtu");
 
@@ -66,7 +66,7 @@ public class GestGroupe extends HttpServlet {
             this.doProcess(request, response);
         }
 
-        else if(state != null && state.equals("creation")){
+        else if (state != null && state.equals("creation")&&(role.equals("admin") || role.equals("editor"))){
             System.out.println("creation");
             String nom = request.getParameter("nom");
             String nomProprietaire = request.getParameter("nom_proprietaire");
@@ -81,7 +81,7 @@ public class GestGroupe extends HttpServlet {
             this.doProcess(request, response);
 
         }
-        else if(state != null && state.equals("SupprEtu")){
+        else if(state != null && state.equals("SupprEtu")&&(role.equals("admin") || role.equals("editor"))){
             String nomGr = request.getParameter("nomGrSuppr");
             String id = request.getParameter("idEtuSuppr");
             Groupe g = etudiantService.getGroupeByNom(nomGr);

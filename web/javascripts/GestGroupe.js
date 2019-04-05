@@ -1,4 +1,20 @@
 window.onload = function() {
+    var id;
+
+    $("li").click(function() {
+        id = $(this).attr("id");
+        loadGroupePage(id);
+    });
+
+    function loadGroupePage(id){
+        console.log(id);
+        $("#groupe_data").load("groupe_data?id="+"gr"+id, function(resp, status, xhr) {
+            console.log(status);
+            console.log(resp);
+            console.log(xhr);
+        });
+    }
+
     var selectedGroupe;
     $('#exclude').on('click',function(e) {
         console.log("test");

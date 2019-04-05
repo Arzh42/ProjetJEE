@@ -8,7 +8,6 @@
 <html>
 <head>
     <title>Liste Groupe</title>
-    <link rel="stylesheet" href="../stylesheets/GestGroupe.css" type="text/css"/>
     <script type="text/javascript" src="../javascripts/jquery.js"> </script>
     <script type="text/javascript" src="../javascripts/GestGroupe.js"></script>
 </head>
@@ -20,17 +19,19 @@
         <a href="GestGroupe">Gestion Groupe</a>
     </nav>
 </header>
-<ul id="listeEtu">
+<ul id="listeGr">
     <%
         for (Groupe g : listGroupes) {
             String nom = g.getNom();
             String dateCreation = g.getDateCreation();
+            String proprio = g.getNomProprietaire();
     %>
-    <li id="gr<%=nom%>">Groupe <%=nom%>,créé le  <%=dateCreation%></li>
+    <li id="<%=nom%>" class="groupeInListe" onclick="">Groupe <%=nom%>,créé le  <%=dateCreation%>, propriété de <%=proprio%></li>
     <%
         }
     %>
 </ul>
+    <div id="groupe_data" style="float: right;"></div>
     <div id="action">
         <button id="create_grp">Créer un nouveau groupe</button>
         <button id="modif_grp">Modifier un groupe</button>

@@ -67,6 +67,15 @@
         <servlet-name>etu_data</servlet-name>
         <url-pattern>/user/etu_data</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>groupe_data</servlet-name>
+        <servlet-class>org.projet.Ajax.Groupe_data</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>groupe_data</servlet-name>
+        <url-pattern>/user/groupe_data</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>GAdminServlet</servlet-name>

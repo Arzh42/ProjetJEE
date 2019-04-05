@@ -95,7 +95,6 @@ public class GestEtu extends HttpServlet {
         System.out.println("<<<<<<<<on a la liste : >>>>>>>>>>>>> \n");
         System.out.println(listEtudiants);
 
-        EtudiantDAOImpl.test();
         request.setAttribute("listEtudiants",listEtudiants);
 
 
