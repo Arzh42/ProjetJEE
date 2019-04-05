@@ -42,12 +42,28 @@
         <url-pattern>/deco</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>List_etu</servlet-name>
+        <servlet-class>org.projet.Ajax.List_etu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>List_etu</servlet-name>
+        <url-pattern>/user/list_etu</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>changeQuestion</servlet-name>
         <servlet-class>org.projet.Servlet.changeQuestionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>changeQuestion</servlet-name>
         <url-pattern>/user/changeQuestion</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>getQuestion</servlet-name>
+        <servlet-class>org.projet.Servlet.getQuestionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getQuestion</servlet-name>
+        <url-pattern>/getQuestion</url-pattern>
     </servlet-mapping>
 
     <servlet>

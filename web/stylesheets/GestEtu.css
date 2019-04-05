@@ -16,9 +16,8 @@ h1 {
     display: block;
     top:100px;
     height: 600px   ;
-    width:150px;
+    width:250px;
     float: left;
-    overflow: auto;
 }
 .etudiantInListe{
     cursor:pointer;

@@ -77,4 +77,10 @@ public class EtudiantServiceImpl implements EtudiantService{
         EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
         etudiantDAO.supprEtuGroupe(g, etu);
     }
+
+    @Override
+    public List<Etudiant> getAllEtudiantsInGroupe(String groupe) {
+        EtudiantDAO etudiantDAO = new EtudiantDAOImpl();
+        return etudiantDAO.getAllEtudiantsInGroupe(groupe);
+    }
 }

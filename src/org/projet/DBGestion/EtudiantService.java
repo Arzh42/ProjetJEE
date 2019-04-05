@@ -26,4 +26,6 @@ public interface EtudiantService {
     void ajoutEtuGroupe(Groupe g, Etudiant etu);
 
     void supprEtuGroupe(Groupe g, Etudiant etu);
+
+    List<Etudiant> getAllEtudiantsInGroupe(String groupe);
 }

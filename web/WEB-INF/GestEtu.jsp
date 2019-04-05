@@ -20,17 +20,9 @@
       <a href="GestGroupe">Gestion Groupe</a>
     </nav>
   </header>
+  <button id="reload">Reload Student list</button>
   <ul id="listeEtu">
-    <%
-      for (Etudiant etu : listEtudiants) {
-        String id = etu.getId();
-        String nom = etu.getNom();
-        String prenom = etu.getPrenom();
-    %>
-      <li class="etudiantInListe" id="<%=id%>" onclick=""><%=nom%> <%=prenom%></li>
-    <%
-      }
-    %>
+
   </ul>
     <br>
     <div id="etu_data"></div>

@@ -7,15 +7,9 @@ import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.InputStream;
-import java.math.BigDecimal;
 import java.sql.*;
-import java.text.ParseException;
 import java.util.*;
-import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -285,6 +279,24 @@ public class EtudiantDAOImpl implements EtudiantDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public List<Etudiant> getAllEtudiantsInGroupe(String groupe) {
+        Connection co = DBManager.getInstance().getConnection();
+        List<Etudiant> list = new ArrayList<>();
+
+        try {
+            System.out.println("<<<<<méthode findByAll >>>>>>");
+            PreparedStatement statement = co.prepareStatement("select * FROM etudiant JOIN etjoingrp ON etudiant.id=etjoingrp.idEt WHERE nameGrp=?");
+            statement.setString(1,groupe);
+            ResultSet rs = statement.executeQuery();
+            BuildEtudiantFromReq(list, rs);
+            DBManager.getInstance().cleanup(co,statement,rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
 

@@ -32,6 +32,7 @@
     %>
 </ul>
     <div id="groupe_data" style="float: right;"></div>
+    <div id="etu_data" style="float:right;"></div>
     <div id="action">
         <button id="create_grp">Créer un nouveau groupe</button>
         <button id="modif_grp">Modifier un groupe</button>

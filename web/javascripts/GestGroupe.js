@@ -13,6 +13,7 @@ window.onload = function() {
             console.log(resp);
             console.log(xhr);
         });
+        $('#etu_data').load("list_etu?id="+id);
     }
 
     var selectedGroupe;
